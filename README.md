@@ -1,26 +1,25 @@
 # 要件定義
 
+*機能概要*\
+地方では車が必須。スーパーやコンビニなどでも5.6kmは珍しくない
+しかし、地方のバス代などは移動している距離の割には割高な場合もある。
+車を持てば移動に困る事は少なくなるのだが、高齢者などは車を持つことをあまり良く思われない。
+そんな中で利用したいのが相乗りという文化。
+近くを通る誰かを見つけて、自分が行きたい目的地を通るなら一緒に乗せてもらう。
+乗せてもらった者は「ガソリン代」としていくらかを払う。
+乗せた方は本来向かう場所だったのでとくにリスクはなく、ガソリン代が浮く。乗せてもらった者は低価格で目的地へ行けるというwinwinのサービス
+
+*カタログ設計*
+*機能一覧*
+*テーブル定義書*
+*ER図*
+*画面遷移図*
+*ワイヤーフレーム*
+https://docs.google.com/spreadsheets/d/1O7X93WxyIBeEvueBKNTybYqgf76Lqs11fbXFWgknFH0/edit?usp=sharing
+
 *バージョン情報*\
 ruby 2.6.5\
 rails 5.2.4.4
-
-*カタログ設計*
-https://docs.google.com/spreadsheets/d/1O7X93WxyIBeEvueBKNTybYqgf76Lqs11fbXFWgknFH0/edit#gid=1628805389
-
-*機能一覧*
-https://docs.google.com/spreadsheets/d/1O7X93WxyIBeEvueBKNTybYqgf76Lqs11fbXFWgknFH0/edit#gid=1628805389
-
-*テーブル定義書*
-https://docs.google.com/spreadsheets/d/1O7X93WxyIBeEvueBKNTybYqgf76Lqs11fbXFWgknFH0/edit#gid=1652305787
-
-*ER図*
-https://cacoo.com/diagrams/5QgFGRP4qx0lWY8k/C47D3
-
-*画面遷移図*
-https://cacoo.com/diagrams/5QgFGRP4qx0lWY8k/73901
-
-*ワイヤーフレーム*
-https://cacoo.com/diagrams/5QgFGRP4qx0lWY8k/BD041
 
 *使用予定Gem*\
 'bcrypt', '3.1.11'\
