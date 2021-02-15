@@ -1,0 +1,33 @@
+<%= form_with(model: @event, local: true) do |form| %>
+
+<% if @event.errors.any? %>
+<div id="error_explanation">
+  <h2><%= @event.errors.count %>件のエラーがあります。</h2>
+  <ul>
+    <% @event.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div>
+  <%= form.label :開催日時 %>
+  <%= form.datetime_local_field :date %>
+  <%= form.label :イベント名 %>
+  <%= form.text_field :title %>
+  <%= form.label :概要 %>
+  <%= form.text_field :content %>
+  <%= form.label :スタート地点 %>
+  <%= form.text_field :start_point %>
+  <%= form.label :ゴール地点 %>
+  <%= form.text_field :goal_point %>
+  <%= form.label :金額 %>
+  <%= form.number_field :carry_price %>
+  <%= form.label :車or乗 %>
+  <%= form.select :status, Event.statuses.keys, { include_blank: '選択してください' }, { required: true } %>
+</div>
+<%= form.submit %>
+
+<%= link_to '投稿一覧', events_path %>
+<% end %>
