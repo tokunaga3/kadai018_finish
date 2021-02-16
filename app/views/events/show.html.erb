@@ -1,0 +1,16 @@
+<h1><%= @event.title %>の詳細画面</h1>
+<p>日付: <%= l @event.date %></p>
+<p>type: <%= @event.status %></p>
+<p>移動予定（スタート）: <%= @event.start_point %></p>
+<p>移動予定（ゴール）:<%= @event.goal_point %></p>
+<p>金額:<%= @event.carry_price %></p>
+<p>概要: <%= @event.content %></p>
+<p>投稿者: <%= @event.user.name %></p>
+
+<%= form_with model:@event, local: true do |f| %>
+  <%= f.label :参加する %>
+  <%= f.check_box :participation %>
+  <%= f.submit "申し込み" %>
+<% end %>
+
+<%= link_to '投稿一覧', events_path %>

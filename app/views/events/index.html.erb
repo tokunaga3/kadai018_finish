@@ -8,7 +8,7 @@
     <th>移動予定（ゴール）</th>
     <th>金額</th>
     <th>タイトル</th>
-    <th>概要</th>
+    <th>投稿者</th>
   </tr>
   <% @events.each_with_index do |event,ids| %>
   <tr>
@@ -18,10 +18,12 @@
     <td ><%= event.goal_point %></td>
     <td ><%= event.carry_price %>円</td>
     <td class="event_row"><%= event.title %></td>
-    <td><%= event.content %></td>
+    <td><%= event.user.name %></td>
     <td class="link"><%= link_to '詳細を確認する', event_path(event) %></td>
-    <td class="link"><%= link_to "イベントを編集する", edit_event_path(event) %></td>
-    <td class="link"><%= link_to 'イベントを削除する', event_path(event), method: :delete %></td>
+    <% if event.user.id == current_user.id %>
+      <td class="link"><%= link_to "イベントを編集する", edit_event_path(event) %></td>
+      <td class="link"><%= link_to 'イベントを削除する', event_path(event), method: :delete %></td>
+    <% end %>
   </tr>
   <% end %>
 </table>

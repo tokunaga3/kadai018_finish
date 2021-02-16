@@ -19,6 +19,9 @@ class EventsController < ApplicationController
   end
 
   def update
+    if params[:commit] == "申し込み"
+     @event.participat_id = current_user.id
+    end
     if @event.update(event_params)
       redirect_to events_path, notice: "イベントを編集しました！"
     else
@@ -42,12 +45,12 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:date, :title, :content, :start_point, :goal_point, :carry_price, :status)
+    params.require(:event).permit(:date, :title, :content, :start_point, :goal_point, :carry_price, :status, :participation, :participat_id)
   end
     private
 
     def set_event
       @event = Event.find(params[:id])
     end
-    
+
 end
