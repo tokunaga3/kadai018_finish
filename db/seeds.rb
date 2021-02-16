@@ -1,7 +1,37 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+10.times do |n|
+  name = Faker::Games::Pokemon.name
+  email = Faker::Internet.email
+  password = "password"
+  User.create!(name: name,
+               email: email,
+               password: password,
+               content:Faker::Games::SuperMario,
+               address:Faker::Games::Pokemon.location,
+               )
+end
+
+5.times do |n|
+  Event.create!(
+    user: User.offset(rand(Event.count)).first,
+    date: "2021/#{rand(1..12)}/#{rand(1..25)}",
+    title: Faker::Games::SuperMario.character,
+    content: Faker::Games::SuperMario.character,
+    start_point: Faker::Games::SuperMario.location,
+    goal_point: Faker::Games::SuperMario.location,
+    status: "車",
+    carry_price: "#{rand(10)}00",
+               )
+end
+
+5.times do |n|
+  Event.create!(
+    user: User.offset(rand(Event.count)).first,
+    date: "2021/#{rand(1..12)}/#{rand(1..25)}",
+    title: Faker::Games::SuperMario.character,
+    content: Faker::Games::SuperMario.character,
+    start_point: Faker::Games::SuperMario.location,
+    goal_point: Faker::Games::SuperMario.location,
+    status: "乗",
+    carry_price: "#{rand(10)}00",
+               )
+end
