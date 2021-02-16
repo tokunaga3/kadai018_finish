@@ -2,23 +2,23 @@
 <%= link_to 'イベントを登録する', new_event_path %>
 <table class="table table-striped">
   <tr>
-    <th>開催日時</th>
-    <th>イベント名</th>
-    <th>概要</th>
-    <th>スタート地点</th>
-    <th>ゴール地点</th>
+    <th>日付</th>
+    <th>type</th>
+    <th>移動予定（スタート）</th>
+    <th>移動予定（ゴール）</th>
     <th>金額</th>
-    <th>車or乗</th>
+    <th>タイトル</th>
+    <th>概要</th>
   </tr>
   <% @events.each_with_index do |event,ids| %>
   <tr>
     <td class="event_name" id="<%=ids%>"><%= l event.date %></td>
-    <td class="event_row"><%= event.title %></td>
-    <td><%= event.content %></td>
+    <td ><%= event.status %></td>
     <td class="event_status"><%= event.start_point %></td>
     <td ><%= event.goal_point %></td>
-    <td ><%= event.carry_price %></td>
-    <td ><%= event.status %></td>
+    <td ><%= event.carry_price %>円</td>
+    <td class="event_row"><%= event.title %></td>
+    <td><%= event.content %></td>
     <td class="link"><%= link_to '詳細を確認する', event_path(event) %></td>
     <td class="link"><%= link_to "イベントを編集する", edit_event_path(event) %></td>
     <td class="link"><%= link_to 'イベントを削除する', event_path(event), method: :delete %></td>
