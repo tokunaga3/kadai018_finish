@@ -33,7 +33,8 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    # @event.users.ids = current_user.id
+    binding.pry
+    @event.user_id = current_user.id
     if @event.save
       redirect_to events_path,notice: "イベントを追加しました！"
     else
