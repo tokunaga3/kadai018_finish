@@ -5,8 +5,8 @@
   User.create!(name: name,
                email: email,
                password: password,
-               user_content:Faker::Games::SuperMario,
-               address:Faker::Games::Pokemon.location,
+               user_content: Faker::Games::SuperMario,
+               address: Faker::Games::Pokemon.location,
                )
 end
 

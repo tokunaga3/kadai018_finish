@@ -5,14 +5,6 @@
 <p>移動予定（ゴール）:<%= @event.goal_point %></p>
 <p>金額:<%= @event.carry_price %></p>
 <p>概要: <%= @event.content %></p>
-<p>投稿者: <%= @event.user.name %></p>
+<p>投稿者: <%= link_to "#{ @event.user.name }", user_path(@event.user) %></p>
 
-<%#= form_with model:@event, local: true do |f| %>
-  <%#= f.label :参加する %>
-  <%#= f.check_box :participation %>
-  <%#= f.submit "申し込み" %>
-  <%= link_to "申し込みする", event_path(@event,participat_status:"申し込み"), method: :put %>
-
-<%# end %>
-
-<%= link_to '投稿一覧', events_path %>
+<%= link_to "申し込みする", event_path(@event,participat_status:"申し込み"), method: :put %>

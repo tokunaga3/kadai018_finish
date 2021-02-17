@@ -1,6 +1,31 @@
 <h1>マイページ</h1>
 <p>名前 : <%= @user.name %></p>
 <p>メールアドレス : <%= @user.email %></p>
-<p>自己紹介文 : <%= @user.content %></p>
+<p>自己紹介文 : <%= @user.user_content %></p>
 <p>住まい : <%= @user.address %></p>
 <p>プロフィール画像 : <%= @user.image %></p>
+<br>
+<p>主催者のイベント情報</p>
+<table>
+  <tr>
+    <th>日付</th>
+    <th>type</th>
+    <th>移動予定（スタート）</th>
+    <th>移動予定（ゴール）</th>
+    <th>金額</th>
+    <th>タイトル</th>
+    <th>投稿者</th>
+  </tr>
+  <% @user.events.each_with_index do |user_event,ids| %>
+    <tr>
+      <td><%= l user_event.date %></td>
+      <td><%= user_event.status %></td>
+      <td><%= user_event.start_point %></td>
+      <td><%= user_event.goal_point %></td>
+      <td><%= user_event.carry_price %></td>
+      <td><%= user_event.title %></td>
+      <td><%= user_event.user.name %></td>
+      <td class="link"><%= link_to "イベントの詳細", event_path(user_event) %></td>
+    </tr>
+  <% end %>
+</table>
