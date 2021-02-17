@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   # ログインしているかどうかを判定
-  # before_action :authenticate_user!
-  # before_action :user_signed_in?
+  before_action :user_signed_in?
+  before_action :authenticate_user!
 
   def index
     @q = Event.ransack(params[:q])
@@ -22,11 +22,15 @@ class EventsController < ApplicationController
   def update
     if params[:commit] == "申し込み"
      @event.participat_id = current_user.id
-    end
-    if @event.update(event_params)
-      redirect_to events_path, notice: "イベントを編集しました！"
+     @event.update(event_params)
+     redirect_to events_path, notice: "参加を申し込みました！"
+    elsif params[:participat_status] == "cancel"
+     @event.participat_id = nil
+     @event.update(event_params)
+     redirect_to users_path, notice: "参加をキャンセルしました！"
     else
-      render :edit
+     @event.update(event_params)
+     render :index
     end
   end
 
@@ -46,7 +50,7 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:date, :title, :content, :start_point, :goal_point, :carry_price, :status, :participation, :participat_id)
+    params.permit(:date, :title, :content, :start_point, :goal_point, :carry_price, :status, :participation, :participat_id)
   end
     private
 

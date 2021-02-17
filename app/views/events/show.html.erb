@@ -8,8 +8,8 @@
 <p>投稿者: <%= @event.user.name %></p>
 
 <%= form_with model:@event, local: true do |f| %>
-  <%= f.label :参加する %>
-  <%= f.check_box :participation %>
+  <%#= f.label :参加する %>
+  <%#= f.check_box :participation %>
   <%= f.submit "申し込み" %>
 <% end %>
 

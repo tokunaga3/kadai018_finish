@@ -1,5 +1,6 @@
 <h1>イベント一覧</h1>
 <%= link_to 'イベントを登録する', new_event_path %>
+<%= link_to 'マイページ', users_path %>
 <%= search_form_for @q do |f| %>
   <%= f.label :title, "タイトル" %>
   <%= f.search_field :title_cont %>
@@ -7,21 +8,26 @@
   <%= f.label :date, "日付" %>
   <%= f.date_field :date_gteq %>〜
   <%= f.date_field :date_lt %>
-  
+
   <%= f.label :status %>
   <%= f.radio_button :status_eq, '', {:checked => true} %>指定なし
   <%= f.radio_button :status_eq, 1 %>車
   <%= f.radio_button :status_eq, 2 %>乗
+
+  <%= f.label :start_point, "スタート地点" %>
+  <%= f.search_field :start_point_cont %>
+
+  <%= f.label :goal_point, "ゴール地点" %>
+  <%= f.search_field :goal_point_cont %>
 
   <%= f.submit "検索" %>
 <% end %>
 <table class="table table-striped">
   <tr>
     <th><%= sort_link(@q, :date, "日付") %></th>
-    <!-- <th>日付</th> -->
-    <th>type</th>
-    <th>移動予定（スタート）</th>
-    <th>移動予定（ゴール）</th>
+    <th><%= sort_link(@q, :status, "type") %></th>
+    <th><%= sort_link(@q, :start_point, "移動予定（スタート）") %></th>
+    <th><%= sort_link(@q, :goal_point, "移動予定（ゴール）") %></th>
     <th><%= sort_link(@q, :carry_price, "金額") %></th>
     <th>タイトル</th>
     <th>投稿者</th>

@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :events, through: :user_events
   validates:name,presence: true
   has_many :events, dependent: :destroy
+  # scope :participat, -> current_user_id{ where(participat_id:current_user_id) }
 end

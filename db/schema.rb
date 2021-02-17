@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2021_02_16_080001) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.boolean "participation", default: false
     t.integer "participat_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
@@ -46,7 +45,7 @@ ActiveRecord::Schema.define(version: 2021_02_16_080001) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "content", default: "", null: false
+    t.string "user_content", default: "", null: false
     t.string "address", default: "", null: false
     t.text "image"
     t.string "name", default: "", null: false
