@@ -7,10 +7,12 @@
 <p>概要: <%= @event.content %></p>
 <p>投稿者: <%= @event.user.name %></p>
 
-<%= form_with model:@event, local: true do |f| %>
+<%#= form_with model:@event, local: true do |f| %>
   <%#= f.label :参加する %>
   <%#= f.check_box :participation %>
-  <%= f.submit "申し込み" %>
-<% end %>
+  <%#= f.submit "申し込み" %>
+  <%= link_to "申し込みする", event_path(@event,participat_status:"申し込み"), method: :put %>
+
+<%# end %>
 
 <%= link_to '投稿一覧', events_path %>

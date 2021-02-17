@@ -20,17 +20,15 @@ class EventsController < ApplicationController
   end
 
   def update
-    if params[:commit] == "申し込み"
-     @event.participat_id = current_user.id
-     @event.update(event_params)
-     redirect_to events_path, notice: "参加を申し込みました！"
+    if params[:participat_status] == "申し込み"
+      @event.update(participat_id: current_user.id)
+      redirect_to events_path, notice: "参加を申し込みました！"
     elsif params[:participat_status] == "cancel"
-     @event.participat_id = nil
-     @event.update(event_params)
-     redirect_to users_path, notice: "参加をキャンセルしました！"
+      @event.update(participat_id: nil)
+      redirect_to users_path, notice: "参加をキャンセルしました！"
     else
-     @event.update(event_params)
-     render :index
+      @event.update(event_params)
+      render :index
     end
   end
 
@@ -50,7 +48,8 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.permit(:date, :title, :content, :start_point, :goal_point, :carry_price, :status, :participation, :participat_id)
+    # binding.pry
+    params.require(:event).permit( :date, :title, :content, :start_point, :goal_point, :carry_price, :status, :participation, :participat_id)
   end
     private
 
