@@ -52,8 +52,9 @@
     <td><%= user_participat.carry_price %></td>
     <td><%= user_participat.title %></td>
     <td><%= user_participat.user.name %></td>
-    <td class="link"><%= link_to "イベントをキャンセルする", event_path(user_participat,participat_status:"cancel"), method: :put %></td>
-    <td class="link"><%= link_to "イベントを完了する", event_path(user_participat,participat_status:"done"), method: :delete %></td>
+    <td class="link"><%= link_to "詳細", event_path(user_participat) %></td>
+    <td class="link"><%= link_to "キャンセルする", event_path(user_participat,participat_status:"cancel"), method: :put %></td>
+    <td class="link"><%= link_to "完了にする", event_path(user_participat,participat_status:"done"), method: :delete %></td>
   </tr>
   <% end %>
 </table>
