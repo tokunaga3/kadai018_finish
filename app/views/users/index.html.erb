@@ -11,7 +11,6 @@
   <tr>
     <th>あなたがフォローしたユーザー</th>
   </tr>
-  <% binding.pry%>
   <% @user.following.each_with_index do |user,id| %>
     <tr>
       <td><%= user.name %></td>

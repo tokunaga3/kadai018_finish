@@ -34,17 +34,19 @@
   </tr>
   <% @events.each_with_index do |event,ids| %>
   <tr>
-    <td class="event_name" id="<%=ids%>"><%= l event.date %></td>
-    <td ><%= event.status %></td>
-    <td class="event_status"><%= event.start_point %></td>
-    <td ><%= event.goal_point %></td>
-    <td ><%= event.carry_price %>円</td>
-    <td class="event_row"><%= event.title %></td>
-    <td><%= event.user.name %></td>
-    <td class="link"><%= link_to '詳細を確認する', event_path(event) %></td>
-    <% if event.user.id == current_user.id %>
-      <td class="link"><%= link_to "イベントを編集する", edit_event_path(event) %></td>
-      <td class="link"><%= link_to 'イベントを削除する', event_path(event), method: :delete %></td>
+    <% if event.participat_id.nil? %>
+      <td class="event_name" id="<%=ids%>"><%= event.date.strftime("%Y年%m月%d日 %H時%M分") %></td>
+      <td ><%= event.status %></td>
+      <td class="event_status"><%= event.start_point %></td>
+      <td ><%= event.goal_point %></td>
+      <td ><%= event.carry_price %>円</td>
+      <td class="event_row"><%= event.title %></td>
+      <td><%= event.user.name %></td>
+      <td class="link"><%= link_to '詳細を確認する', event_path(event) %></td>
+      <% if event.user.id == current_user.id %>
+        <td class="link"><%= link_to "イベントを編集する", edit_event_path(event) %></td>
+        <td class="link"><%= link_to 'イベントを削除する', event_path(event), method: :delete, data: {confirm: "このイベントに申込みますか？"} %></td>
+      <% end %>
     <% end %>
   </tr>
   <% end %>
