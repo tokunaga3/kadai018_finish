@@ -1,24 +1,23 @@
-<p>フォロー</p>
-
-<% @u = []%>
-<% @u << @user%>
-
-<% @u.each do |user| %>
-   <%= user.name %>
-   <%= user.email %>
-   <%= render 'follow_form', user: user %>
- <% end %>
- <li><%= link_to 'イベント一覧', events_path %></li>
-
-<br>
 <h1>マイページ</h1>
-<p>名前 : <%= @user.name %></p>
+
+<table>
+  <tr>
+    <td>名前 : <%= @user.name %></td>
+    <% unless current_user.id == @user.id%>
+      <td><%= render 'follow_form', user: @user %></td>
+    <% end %>
+  </tr>
+</table>
 <p>メールアドレス : <%= @user.email %></p>
 <p>自己紹介文 : <%= @user.user_content %></p>
 <p>住まい : <%= @user.address %></p>
-<p>プロフィール画像 : <%= @user.image %></p>
-<br>
-<p>主催者のイベント情報</p>
+<% unless @user.image.url.nil?%>
+  <p><%= image_tag @user.image.url, :size =>'100x100' %></p>
+  <br>
+<% else %>
+  <p>プロフィール画像：（なし）</p>
+<% end %>
+<p>この主催者のイベント情報</p>
 <table>
   <tr>
     <th>日付</th>

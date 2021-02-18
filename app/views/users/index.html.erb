@@ -4,8 +4,34 @@
 <p>自己紹介文 : <%= @user.user_content %></p>
 <p>住まい : <%= @user.address %></p>
 <p><%= image_tag @user.image.url, :size =>'100x100' %></p>
-
 <p class="link"><%= link_to "マイページを編集する", edit_user_path(@user) %></p>
+<p class="link"><%= link_to "マイページを確認する", user_path(@user) %></p>
+<br>
+<table>
+  <tr>
+    <th>あなたがフォローしたユーザー</th>
+  </tr>
+  <% binding.pry%>
+  <% @user.following.each_with_index do |user,id| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= link_to "詳細", user_path(user) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<table>
+  <tr>
+    <th>あなたをフォローしたユーザー</th>
+  </tr>
+  <% @user.followers.each_with_index do |user,id| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= link_to "詳細", user_path(user) %></td>
+    </tr>
+  <% end %>
+</table>
+
 <br>
 <p>参加中のイベント</p>
 <table>
