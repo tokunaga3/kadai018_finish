@@ -1,3 +1,16 @@
+<p>フォロー</p>
+
+<% @u = []%>
+<% @u << @user%>
+
+<% @u.each do |user| %>
+   <%= user.name %>
+   <%= user.email %>
+   <%= render 'follow_form', user: user %>
+ <% end %>
+ <li><%= link_to 'イベント一覧', events_path %></li>
+
+<br>
 <h1>マイページ</h1>
 <p>名前 : <%= @user.name %></p>
 <p>メールアドレス : <%= @user.email %></p>

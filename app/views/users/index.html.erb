@@ -3,7 +3,8 @@
 <p>メールアドレス : <%= @user.email %></p>
 <p>自己紹介文 : <%= @user.user_content %></p>
 <p>住まい : <%= @user.address %></p>
-<p>プロフィール画像 : <%= @user.image %></p>
+<p><%= image_tag @user.image.url, :size =>'100x100' %></p>
+
 <p class="link"><%= link_to "マイページを編集する", edit_user_path(@user) %></p>
 <br>
 <p>参加中のイベント</p>
@@ -27,6 +28,7 @@
     <td><%= user_participat.title %></td>
     <td><%= user_participat.user.name %></td>
     <td class="link"><%= link_to "イベントをキャンセルする", event_path(user_participat,participat_status:"cancel"), method: :put %></td>
+    <td class="link"><%= link_to "イベントを完了する", event_path(user_participat,participat_status:"done"), method: :delete %></td>
   </tr>
   <% end %>
 </table>
