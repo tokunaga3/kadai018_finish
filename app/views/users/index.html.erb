@@ -3,11 +3,20 @@
 <p>メールアドレス : <%= @user.email %></p>
 <p>自己紹介文 : <%= @user.user_content %></p>
 <p>住まい : <%= @user.address %></p>
-<p><%= image_tag @user.image.url, :size =>'100x100' %></p>
+<% unless @user.image.url.nil?%>
+  <p><%= image_tag @user.image.url, :size =>'100x100' %></p>
+  <br>
+<% else %>
+  <p>プロフィール画像：（なし）</p>
+<% end %>
 <p class="link"><%= link_to "マイページを編集する", edit_user_path(@user) %></p>
 <p class="link"><%= link_to "マイページを確認する", user_path(@user) %></p>
 <br>
 <table>
+  <% if @user.following == []%>
+    <br>
+    <b>現在フォローしたユーザーはいません</b>
+  <% else %>
   <tr>
     <th>あなたがフォローしたユーザー</th>
   </tr>
@@ -17,17 +26,23 @@
       <td><%= link_to "詳細", user_path(user) %></td>
     </tr>
   <% end %>
+<% end %>
 </table>
 
 <table>
-  <tr>
-    <th>あなたをフォローしたユーザー</th>
-  </tr>
-  <% @user.followers.each_with_index do |user,id| %>
+  <% if @user.followers == []%>
+    <br>
+    <b>現在フォローしたユーザーはいません</b>
+  <% else %>
     <tr>
-      <td><%= user.name %></td>
-      <td><%= link_to "詳細", user_path(user) %></td>
+      <th>あなたをフォローしたユーザー</th>
     </tr>
+    <% @user.followers.each_with_index do |user,id| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= link_to "詳細", user_path(user) %></td>
+      </tr>
+    <% end %>
   <% end %>
 </table>
 
@@ -45,7 +60,7 @@
   </tr>
   <% @participat.each_with_index do |user_participat,ids| %>
   <tr>
-    <td><%= l user_participat.date %></td>
+    <td><%= user_participat.date.strftime("%Y年%m月%d日 %H時%M分") %></td>
     <td><%= user_participat.status %></td>
     <td><%= user_participat.start_point %></td>
     <td><%= user_participat.goal_point %></td>
@@ -72,7 +87,7 @@
   </tr>
   <% @user.events.each_with_index do |user_event,ids| %>
     <tr>
-      <td><%= l user_event.date %></td>
+      <td><%= user_event.date.strftime("%Y年%m月%d日 %H時%M分") %></td>
       <td><%= user_event.status %></td>
       <td><%= user_event.start_point %></td>
       <td><%= user_event.goal_point %></td>

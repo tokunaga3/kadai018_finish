@@ -7,6 +7,5 @@ Rails.application.routes.draw do
     end
   end
   resources :events
-  # resources :participats, only: [:update]
   resources :relationships, only: [:create, :destroy]
 end

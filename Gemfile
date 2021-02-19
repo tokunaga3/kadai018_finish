@@ -73,3 +73,8 @@ gem 'ransack'
 gem 'carrierwave'
 gem 'mini_magick'
 gem "jquery-rails"
+gem 'rspec-rails'
+gem 'spring-commands-rspec'
+gem 'factory_bot_rails'
+gem 'launchy'
+gem 'webdrivers'

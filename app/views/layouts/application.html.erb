@@ -14,9 +14,11 @@
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
     <% if user_signed_in? %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      <%= link_to '投稿一覧', events_path %>
-      <%= link_to '戻る', 'javascript:history.back()' %>
+      <button type="button" class="btn btn-outline-danger" id="hedder_right"><a href="#" class="text-danger"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></a></button>
+      <% unless action_name == "index" && controller_name == "events" %>
+        <button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to '投稿一覧', events_path %></a></<button>
+      <% end %>
+      <button type="button" class="btn btn-outline-primary" id="hedder_left"><%= link_to '戻る', 'javascript:history.back()' %></button>
     <% else %>
     <% end %>
     <%= yield %>
