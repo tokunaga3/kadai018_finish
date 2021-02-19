@@ -7,19 +7,34 @@ RSpec.describe 'イベント管理機能', type: :system do
       end
 
       it 'マイページが見れる' do
-      end
+        FactoryBot.create(:user)
+        visit '/users/sign_in'
+        fill_in 'メールアドレス', with: 'test1@example.com'
+        fill_in 'パスワード', with: '111111'
+        find(:xpath, 'id("new_user")/div[@class="actions"]/input[1]').click
 
-      it 'ユーザーをフォローできる' do
-      end
+        # visit 'root_path'
+        visit '/events'
+        click_link 'マイページ'
+        expect(page).to have_content('マイページ')
+        # expect(User.all).to include User.all[0]
 
-      it 'ユーザーにフォローされる' do
       end
-      it 'マイページを編集できる' do
-      end
-      it 'マイページに主催したイベント情報が表示されている' do
-      end
-      it 'マイページに参加したイベント情報が表示される' do
-      end
+      #
+      # it 'ユーザーをフォローできる' do
+      # end
+      #
+      # it 'ユーザーにフォローされる' do
+      # end
+      #
+      # it 'マイページを編集できる' do
+      # end
+      #
+      # it 'マイページに主催したイベント情報が表示されている' do
+      # end
+      #
+      # it 'マイページに参加したイベント情報が表示される' do
+      # end
     end
   end
 end

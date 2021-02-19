@@ -13,10 +13,24 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'capybara/rspec'
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
+  # config.before(:each) do |example|
+  #   driven_by :selenium, using: :headless_chrome, screen_size: [1400, 1400], options: { args: ['no-sandbox'] } if example.metadata[:type] == :system
+  # end
+  config.include Capybara::DSL
+  config.before(:each) do |example|
+    driven_by :selenium, using: :headless_chrome, screen_size: [1400, 1400], options: { args: ['no-sandbox'] } if example.metadata[:type] == :system
+  end
+
+  # Capybara.configure do |config|
+  #   config.run_server = false
+  #   config.default_driver = :selenium
+  #   config.app_host = 'http://0.0.0.0:3000/' # localhost(rails s)
+  # end
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
