@@ -60,7 +60,7 @@
   </tr>
   <% @participat.each_with_index do |user_participat,ids| %>
   <tr>
-    <td><%= user_participat.date.strftime("%Y年%m月%d日 %H時%M分") %></td>
+    <td class="test_date"><%= user_participat.date.strftime("%Y年%m月%d日 %H時%M分") %></td>
     <td><%= user_participat.status %></td>
     <td><%= user_participat.start_point %></td>
     <td><%= user_participat.goal_point %></td>
@@ -68,7 +68,7 @@
     <td><%= user_participat.title %></td>
     <td><%= user_participat.user.name %></td>
     <td class="link"><%= link_to "詳細", event_path(user_participat) %></td>
-    <td class="link"><%= link_to "キャンセルする", event_path(user_participat,participat_status:"cancel"), method: :put %></td>
+    <td class="link"><%= link_to "#{user_participat.title}をキャンセルする", event_path(user_participat,participat_status:"cancel"), method: :put %></td>
     <td class="link"><%= link_to "完了にする", event_path(user_participat,participat_status:"done"), method: :delete %></td>
   </tr>
   <% end %>

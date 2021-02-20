@@ -56,7 +56,7 @@
       <td class="link<%=ids%>" id="show<%=ids%>"><%= link_to "#{event.title}の詳細を確認", event_path(event) %></td>
       <% if event.user.id == current_user.id %>
         <td class="link"><%= link_to "イベントを編集する", edit_event_path(event) %></td>
-        <td class="link"><%= link_to 'イベントを削除する', event_path(event), method: :delete, data: {confirm: "このイベントに申込みますか？"} %></td>
+        <td class="link"><%= link_to "#{event.title}のイベントを削除する", event_path(event), method: :delete, data: {confirm: "このイベントを削除しますか？"} %></td>
       <% end %>
     <% end %>
   </tr>
