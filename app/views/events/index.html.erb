@@ -53,7 +53,7 @@
       <td ><%= event.carry_price %>円</td>
       <td class="event_row"><%= event.title %></td>
       <td><%= event.user.name %></td>
-      <td class="link"><%= link_to '詳細を確認する', event_path(event) %></td>
+      <td class="link<%=ids%>" id="show<%=ids%>"><%= link_to "#{event.title}の詳細を確認", event_path(event) %></td>
       <% if event.user.id == current_user.id %>
         <td class="link"><%= link_to "イベントを編集する", edit_event_path(event) %></td>
         <td class="link"><%= link_to 'イベントを削除する', event_path(event), method: :delete, data: {confirm: "このイベントに申込みますか？"} %></td>
