@@ -34,7 +34,6 @@ RSpec.describe 'イベント管理機能', type: :system do
       end
 
       it 'マイページに参加したイベント情報が表示される' do
-        # user3 = FactoryBot.create(:user)
         user3 = User.create(id:5, name: 'test2', email: 'test2@example.com',password: '111111',user_content: '222', address: '222'  )
         FactoryBot.create(:event, title:'event100',participat_id:user3.id, user_id: User.first.id)
         click_link 'ログアウト'
