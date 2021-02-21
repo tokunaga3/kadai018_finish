@@ -10,7 +10,7 @@
                )
 end
 
-5.times do |n|
+15.times do |n|
   Event.create!(
     user: User.offset(rand(Event.count)).first,
     date: "2021/#{rand(1..12)}/#{rand(1..25)}",
@@ -23,7 +23,7 @@ end
                )
 end
 
-5.times do |n|
+15.times do |n|
   Event.create!(
     user: User.offset(rand(Event.count)).first,
     date: "2021/#{rand(1..12)}/#{rand(1..25)}",
