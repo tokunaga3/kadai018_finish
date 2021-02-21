@@ -11,16 +11,16 @@
 </div>
 <% end %>
 
-<div>
-  <%= form.label :名前 %>
-  <%= form.text_field :name %>
-  <%= form.label :自己紹介 %>
-  <%= form.text_field :content %>
-  <%= form.label :住まい %>
-  <%= form.text_field :address %>
-  <%= form.label :プロフィール画像 %>
-  <%= form.file_field :image %>
-</div>
+  <div>
+    <%= form.label :名前 %>
+    <%= form.text_field :name %>
+    <%= form.label :自己紹介 %>
+    <%= form.text_field :content %>
+    <%= form.label :住まい %>
+    <%= form.text_field :address %>
+    <%= form.label :プロフィール画像 %>
+    <%= form.file_field :image %>
+  </div>
 <%= form.submit %>
 
 <%= link_to 'マイページへ', users_path %>
