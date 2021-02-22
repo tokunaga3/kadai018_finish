@@ -3,62 +3,66 @@
 
 <h1>イベント一覧</h1>
 <%= search_form_for @q do |f| %>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <ul>
-        <li><%= f.label :title, "タイトル" %></li>
-        <li><%= f.search_field :title_cont %></li>
-        <li><%= f.label :date, "日付" %></li>
-        <li><%= f.date_field :date_gteq %>〜
-            <%= f.date_field :date_lt %></li>
-        <table>
-          <tr>
-            <li><%= f.label :status %></li>
-            <td><%= f.radio_button :status_eq, '', {:checked => true} %>指定なし</td>
-            <td><%= f.radio_button :status_eq, 1 %>車</td>
-            <td><%= f.radio_button :status_eq, 2 %>乗</td>
-          </tr>
-        </table>
-    </div>
-    <div class="col">
-          <li><%= f.label :start_point, "スタート地点" %></li>
-          <li><%= f.search_field :start_point_cont %></li>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ul>
+          <li><%= f.label :title, "タイトル" %></li>
+          <li><%= f.search_field :title_cont %></li>
+          <li><%= f.label :date, "日付" %></li>
+          <li><%= f.date_field :date_gteq %>〜
+              <%= f.date_field :date_lt %></li>
+          <table>
+            <tr>
+              <li><%= f.label :status %></li>
+              <td><%= f.radio_button :status_eq, '', {:checked => true} %>指定なし</td>
+              <td><%= f.radio_button :status_eq, 1 %>車</td>
+              <td><%= f.radio_button :status_eq, 2 %>乗</td>
+            </tr>
+          </table>
+      </div>
+      <div class="col">
+            <li><%= f.label :start_point, "スタート地点" %></li>
+            <li><%= f.search_field :start_point_cont %></li>
 
-          <li><%= f.label :goal_point, "ゴール地点" %></li>
-          <li><%= f.search_field :goal_point_cont %></li>
-          <li id="index_submit"><%= f.submit "検索" %></li>
-      </ul>
+            <li><%= f.label :goal_point, "ゴール地点" %></li>
+            <li><%= f.search_field :goal_point_cont %></li>
+            <li id="index_submit"><%= f.submit "検索" %></li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 <% end %>
-<table class="table table-striped">
-  <tr>
-    <th><%= sort_link(@q, :date, "日付") %></th>
-    <th><%= sort_link(@q, :status, "type") %></th>
-    <th><%= sort_link(@q, :start_point, "移動予定（スタート）") %></th>
-    <th><%= sort_link(@q, :goal_point, "移動予定（ゴール）") %></th>
-    <th><%= sort_link(@q, :carry_price, "金額") %></th>
-    <th>タイトル</th>
-    <th>投稿者</th>
+
+<table class="table table-striped" >
+  <tr >
+    <th ><%= sort_link(@q, :date, "日付") %></th>
+    <th ><%= sort_link(@q, :status, "type") %></th>
+    <th ><%= sort_link(@q, :start_point, "移動予定（スタート）") %></th>
+    <th ><%= sort_link(@q, :goal_point, "移動予定（ゴール）") %></th>
+    <th ><%= sort_link(@q, :carry_price, "金額") %></th>
+    <th >タイトル</th>
+    <th >投稿者</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
   <% @events.each_with_index do |event,ids| %>
-  <tr>
-    <% if event.participat_id.nil? %>
-      <td class="event_name" id="<%=ids%>"><%= event.date.strftime("%Y年%m月%d日 %H時%M分") %></td>
-      <td ><%= event.status %></td>
-      <td class="event_status"><%= event.start_point %></td>
-      <td ><%= event.goal_point %></td>
-      <td ><%= event.carry_price %>円</td>
-      <td class="event_row"><%= event.title %></td>
-      <td><%= event.user.name %></td>
-      <td class="link<%=ids%>" id="show<%=ids%>"><%= link_to "#{event.title}の詳細を確認", event_path(event) %></td>
-      <% if event.user.id == current_user.id %>
-        <td class="link"><%= link_to "イベントを編集する", edit_event_path(event) %></td>
-        <td class="link"><%= link_to "#{event.title}のイベントを削除する", event_path(event), method: :delete, data: {confirm: "このイベントを削除しますか？"} %></td>
+    <tr>
+      <% if event.participat_id.nil? %>
+        <td  class="event_name" id="<%=ids%>"><%= event.date.strftime("%Y年%m月%d日 %H時%M分") %></td>
+        <td  ><%= event.status %></td>
+        <td  class="event_status"><%= event.start_point %></td>
+        <td  ><%= event.goal_point %></td>
+        <td  ><%= event.carry_price %>円</td>
+        <td  class="event_row"><%= event.title %></td>
+        <td  ><%= event.user.name %></td>
+              <td id="link"><button type="button" class="btn btn-outline-secondary btn-sm"><%= link_to "#{event.title}の詳細を確認", event_path(event) %></button></td>
+              <% if event.user.id == current_user.id %>
+                <td id="link"><button type="button" class="btn btn-outline-secondary btn-sm"><%= link_to "イベントを編集する", edit_event_path(event) %></button></td>
+                <td id="link" ><button type="button" class="btn btn-outline-secondary btn-sm"><%= link_to "#{event.title}のイベントを削除する", event_path(event), method: :delete, data: {confirm: "このイベントを削除しますか？"} %></button></td>
+              <% end %>
       <% end %>
-    <% end %>
-  </tr>
+    </tr>
   <% end %>
 </table>

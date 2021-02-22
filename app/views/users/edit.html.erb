@@ -1,5 +1,6 @@
+<div class="blank">
+</div>
 <%= form_with(model: @user, local: true) do |form| %>
-
 <% if @user.errors.any? %>
 <div id="error_explanation">
   <h2><%= @user.errors.count %>件のエラーがあります。</h2>
@@ -11,13 +12,19 @@
 </div>
 <% end %>
 
-  <div>
+  <div class="form-group">
     <%= form.label :名前 %>
     <%= form.text_field :name %>
+  </div>
+  <div class="form-group">
     <%= form.label :自己紹介 %>
     <%= form.text_field :content %>
+  </div>
+  <div class="form-group">
     <%= form.label :住まい %>
     <%= form.text_field :address %>
+  </div>
+  <div class="form-group">
     <%= form.label :プロフィール画像 %>
     <%= form.file_field :image %>
   </div>

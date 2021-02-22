@@ -1,18 +1,22 @@
 <h1>マイページ</h1>
-<p>名前 : <%= @user.name %></p>
-<p>メールアドレス : <%= @user.email %></p>
-<p>自己紹介文 : <%= @user.user_content %></p>
-<p>住まい : <%= @user.address %></p>
-<% unless @user.image.url.nil?%>
-  <p><%= image_tag @user.image.url, :size =>'100x100' %></p>
-  <br>
-<% else %>
-  <p>プロフィール画像：（なし）</p>
-<% end %>
+<div >
+  <div>
+    <p>名前 : <%= @user.name %></p>
+    <p>メールアドレス : <%= @user.email %></p>
+    <p>自己紹介文 : <%= @user.user_content %></p>
+    <p>住まい : <%= @user.address %></p>
+    <% unless @user.image.url.nil?%>
+      <p><%= image_tag @user.image.url, :size =>'100x100' %></p>
+      <br>
+    <% else %>
+      <p>プロフィール画像：（なし）</p>
+    <% end %>
+  </div>
+</div>
 <p class="link"><%= link_to "マイページを編集する", edit_user_path(@user) %></p>
 <p class="link"><%= link_to "マイページを確認する", user_path(@user) %></p>
 <br>
-<table>
+<table class="table">
   <% if @user.following == []%>
     <br>
     <b>現在フォローしたユーザーはいません</b>
@@ -29,7 +33,7 @@
 <% end %>
 </table>
 
-<table>
+<table class="table">
   <% if @user.followers == []%>
     <br>
     <b>現在フォローしたユーザーはいません</b>
@@ -48,7 +52,7 @@
 
 <br>
 <p>参加中のイベント</p>
-<table>
+<table class="table">
   <tr>
     <th>日付</th>
     <th>type</th>
@@ -57,6 +61,9 @@
     <th>金額</th>
     <th>タイトル</th>
     <th>投稿者</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
   <% @participat.each_with_index do |user_participat,ids| %>
   <tr>
@@ -75,7 +82,7 @@
 </table>
 <br>
 <p>主催中のイベント</p>
-<table>
+<table class="table">
   <tr>
     <th>日付</th>
     <th>type</th>
@@ -84,6 +91,8 @@
     <th>金額</th>
     <th>タイトル</th>
     <th>投稿者</th>
+    <th></th>
+    <th></th>
   </tr>
   <% @user.events.each_with_index do |user_event,ids| %>
     <tr>
