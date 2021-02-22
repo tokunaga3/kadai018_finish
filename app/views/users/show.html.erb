@@ -18,7 +18,7 @@
   <p>プロフィール画像：（なし）</p>
 <% end %>
 <p>この主催者のイベント情報</p>
-<table>
+<table class="table">
   <tr>
     <th>日付</th>
     <th>type</th>
@@ -27,6 +27,7 @@
     <th>金額</th>
     <th>タイトル</th>
     <th>投稿者</th>
+    <th></th>
   </tr>
   <% @user.events.each_with_index do |user_event,ids| %>
     <tr>
