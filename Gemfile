@@ -45,3 +45,4 @@ gem "jquery-rails"
 gem 'spring-commands-rspec'
 gem 'factory_bot_rails'
 gem 'launchy'
+gem 'rails-i18n'

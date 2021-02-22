@@ -1,29 +1,29 @@
-<h1>マイページ</h1>
+<h1 class="display-3">ユーザ情報</h1>
 
 <table>
   <tr>
-    <td>名前 : <%= @user.name %></td>
+    <td class="lead">名前 : <%= @user.name %></td>
     <% unless current_user.id == @user.id%>
       <td><%= render 'follow_form', user: @user %></td>
     <% end %>
   </tr>
 </table>
-<p>メールアドレス : <%= @user.email %></p>
-<p>自己紹介文 : <%= @user.user_content %></p>
-<p>住まい : <%= @user.address %></p>
+<p class="lead">メールアドレス : <%= @user.email %></p>
+<p class="lead">自己紹介文 : <%= @user.user_content %></p>
+<p class="lead">住まい : <%= @user.address %></p>
 <% unless @user.image.url.nil?%>
-  <p><%= image_tag @user.image.url, :size =>'100x100' %></p>
+  <p class="lead"><%= image_tag @user.image.url, :size =>'100x100' %></p>
   <br>
 <% else %>
-  <p>プロフィール画像：（なし）</p>
+  <p class="lead">プロフィール画像：（なし）</p>
 <% end %>
-<p>この主催者のイベント情報</p>
+<p class="lead">この主催者のイベント情報</p>
 <table class="table">
   <tr>
     <th>日付</th>
     <th>type</th>
-    <th>移動予定（スタート）</th>
-    <th>移動予定（ゴール）</th>
+    <th>スタート</th>
+    <th>ゴール</th>
     <th>金額</th>
     <th>タイトル</th>
     <th>投稿者</th>

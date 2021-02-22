@@ -1,5 +1,41 @@
 ja:
   activerecord:
+    errors:
+      models:
+        event:
+          attributes:
+            date:
+              taken: "は既に使用されています。"
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            title:
+              taken: "は既に使用されています。"
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            content:
+              taken: "は既に使用されています。"
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            start_point:
+              taken: "は既に使用されています。"
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            goal_point:
+              taken: "は既に使用されています。"
+              blank: "が入力されていません。"
+              too_short: "は%{count}文字以上に設定して下さい。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+ja:
+  activerecord:
     attributes:
       user:
         confirmation_sent_at: パスワード確認送信時刻
@@ -27,6 +63,7 @@ ja:
         updated_at: 更新日
     models:
       user: ユーザー
+      event: イベント
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
