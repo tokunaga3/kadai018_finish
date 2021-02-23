@@ -1,4 +1,10 @@
 <h1 class="display-3">ユーザ情報</h1>
+<% unless @user.image.url.nil?%>
+  <p class="lead float-right" id="user_image"><%= image_tag @user.image.url, :size =>'300x300' %></p>
+  <br>
+<% else %>
+  <p class="lead">プロフィール画像：（なし）</p>
+<% end %>
 
 <table>
   <tr>
@@ -11,12 +17,6 @@
 <p class="lead">メールアドレス : <%= @user.email %></p>
 <p class="lead">自己紹介文 : <%= @user.user_content %></p>
 <p class="lead">住まい : <%= @user.address %></p>
-<% unless @user.image.url.nil?%>
-  <p class="lead"><%= image_tag @user.image.url, :size =>'100x100' %></p>
-  <br>
-<% else %>
-  <p class="lead">プロフィール画像：（なし）</p>
-<% end %>
 <p class="lead">この主催者のイベント情報</p>
 <table class="table">
   <tr>

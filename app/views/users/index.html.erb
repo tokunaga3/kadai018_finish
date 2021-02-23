@@ -1,17 +1,20 @@
 <button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to "マイページを編集する", edit_user_path(@user) %></a></button>
 <button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to "マイページを確認する", user_path(@user) %></a></button>
+
 <h1 class="display-3">マイページ</h1>
+<% unless @user.image.url.nil?%>
+<p class="lead float-right" id="user_image"><%= image_tag @user.image.url, :size =>'300x300' %></p>
+<br>
+<% else %>
+<p class="lead user_data">プロフィール画像：（なし）</p>
+<% end %>
     <p class="lead user_data">名前 : <%= @user.name %></p>
     <p class="lead user_data">メールアドレス : <%= @user.email %></p>
     <p class="lead user_data">自己紹介文 : <%= @user.user_content %></p>
-    <p class="lead col-3">住まい : <%= @user.address %></p>
-    <% unless @user.image.url.nil?%>
-      <p class="lead" id="user_image"><%= image_tag @user.image.url, :size =>'300x300' %></p>
-      <br>
-    <% else %>
-      <p class="lead user_data">プロフィール画像：（なし）</p>
-    <% end %>
+    <p class="lead ">住まい : <%= @user.address %></p>
+
 <br>
+
 <table class="table" id="table_follow">
   <% if @user.following == []%>
     <br>
@@ -62,18 +65,18 @@
     <th></th>
   </tr>
   <% @participat.each_with_index do |user_participat,ids| %>
-  <tr>
-    <td class="test_date"><%= user_participat.date.strftime("%Y年%m月%d日 %H時%M分") %></td>
-    <td><%= user_participat.status %></td>
-    <td><%= user_participat.start_point %></td>
-    <td><%= user_participat.goal_point %></td>
-    <td><%= user_participat.carry_price %></td>
-    <td><%= user_participat.title %></td>
-    <td><%= user_participat.user.name %></td>
-    <td class="link"><%= link_to "詳細", event_path(user_participat) %></td>
-    <td class="link"><%= link_to "#{user_participat.title}をキャンセルする", event_path(user_participat,participat_status:"cancel"), method: :put %></td>
-    <td class="link"><%= link_to "完了にする", event_path(user_participat,participat_status:"done"), method: :delete %></td>
-  </tr>
+    <tr>
+      <td class="test_date"><%= user_participat.date.strftime("%Y年%m月%d日 %H時%M分") %></td>
+      <td><%= user_participat.status %></td>
+      <td><%= user_participat.start_point %></td>
+      <td><%= user_participat.goal_point %></td>
+      <td><%= user_participat.carry_price %></td>
+      <td><%= user_participat.title %></td>
+      <td><%= user_participat.user.name %></td>
+      <td class="link"><%= link_to "詳細", event_path(user_participat) %></td>
+      <td class="link"><%= link_to "#{user_participat.title}をキャンセルする", event_path(user_participat,participat_status:"cancel"), method: :put %></td>
+      <td class="link"><%= link_to "完了にする", event_path(user_participat,participat_status:"done"), method: :delete %></td>
+    </tr>
   <% end %>
 </table>
 <br>
