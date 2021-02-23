@@ -22,7 +22,7 @@ RSpec.describe 'イベント管理機能', type: :system do
         click_link 'マイページ'
         click_link 'マイページを編集する'
         fill_in 'user_name', with: 'テスト3'
-        click_on 'Update ユーザ'
+        click_on '更新する'
         expect(page).to have_content('テスト3')
       end
 

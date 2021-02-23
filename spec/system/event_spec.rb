@@ -66,7 +66,7 @@ RSpec.describe 'イベント管理機能', type: :system do
 
       it '日付から検索' do
         visit '/events'
-        fill_in 'q_date_gteq', with: '2023-02-26'.to_date
+        fill_in 'q_date_gteq', with: '2024-02-26'.to_date
         click_on '検索'
         expect(page).to have_content('event103')
         expect(page).to_not have_content('event100')
