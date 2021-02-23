@@ -12,6 +12,17 @@ ja:
         title: タイトル
         date: 開催日時
         status: type
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        email: メールアドレス
+        user_content: 概要
+        address: 住まい情報
+        name: 名前
+
 # ja:
 #   activerecord:
 #     attributes:
