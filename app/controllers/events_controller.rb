@@ -26,8 +26,9 @@ class EventsController < ApplicationController
     elsif params[:participat_status] == "cancel"
       @event.update(participat_id: nil)
       redirect_to users_path, notice: "参加をキャンセルしました！"
+    elsif @event.update(event_params) && params[:participat_status] != "申し込み" && params[:participat_status] != "cancel"
+      redirect_to events_path
     else
-      @event.update(event_params)
       render :edit
     end
   end
