@@ -28,7 +28,7 @@ class EventsController < ApplicationController
       redirect_to users_path, notice: "参加をキャンセルしました！"
     else
       @event.update(event_params)
-      render :index
+      render :edit
     end
   end
 
