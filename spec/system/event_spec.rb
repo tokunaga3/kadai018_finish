@@ -10,10 +10,10 @@ RSpec.describe 'イベント管理機能', type: :system do
         fill_in 'メールアドレス', with: 'test1@example.com'
         fill_in 'パスワード', with: '111111'
         find(:xpath, 'id("new_user")/div[@class="actions"]/input[1]').click
-        FactoryBot.create(:event, date:'2020-02-28',title:'event100', status:"乗",start_point:'梅田',goal_point:'十三',user_id: User.first.id)
-        FactoryBot.create(:event, date:'2021-02-28',title:'event101', status:"車",start_point:'中津',goal_point:'茨城',user_id: User.first.id)
-        FactoryBot.create(:event, date:'2022-02-28',title:'event102', status:"乗",start_point:'下新庄',goal_point:'上新庄',user_id: user2.id)
-        FactoryBot.create(:event, date:'2023-02-28',title:'event103', status:"車",start_point:'三宮',goal_point:'天満',user_id: user2.id)
+        FactoryBot.create(:event, date:'2021-02-28',title:'event100', status:"乗",start_point:'梅田',goal_point:'十三',user_id: User.first.id)
+        FactoryBot.create(:event, date:'2022-02-28',title:'event101', status:"車",start_point:'中津',goal_point:'茨城',user_id: User.first.id)
+        FactoryBot.create(:event, date:'2023-02-28',title:'event102', status:"乗",start_point:'下新庄',goal_point:'上新庄',user_id: user2.id)
+        FactoryBot.create(:event, date:'2024-02-28',title:'event103', status:"車",start_point:'三宮',goal_point:'天満',user_id: user2.id)
       end
 
       it 'ログインできる' do

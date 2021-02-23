@@ -53,11 +53,10 @@ class EventsController < ApplicationController
     end
   end
 
-  def event_params
-    # binding.pry
-    params.require(:event).permit( :date, :title, :content, :start_point, :goal_point, :carry_price, :status, :participation, :participat_id)
-  end
-    private
+  private
+    def event_params
+      params.require(:event).permit( :date, :title, :content, :start_point, :goal_point, :carry_price, :status, :participation, :participat_id)
+    end
 
     def set_event
       @event = Event.find(params[:id])

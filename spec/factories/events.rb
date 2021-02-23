@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :event do
-    date {'2021/01/25'}
+    date {'2022/01/25'}
     title {'event1'}
     content {'aa'}
     start_point {'a'}
