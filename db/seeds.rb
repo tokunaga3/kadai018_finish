@@ -1,37 +1,47 @@
 10.times do |n|
-  name = Faker::Games::Pokemon.name
+  gimei = Gimei.new
   email = Faker::Internet.email
   password = "password"
-  User.create!(name: name,
+  User.create!(name: gimei.name.kanji,
                email: email,
                password: password,
-               user_content: Faker::Games::SuperMario,
-               address: Faker::Games::Pokemon.location,
+               user_content: "よろしくお願いします",
+               address: gimei.address.kanji,
                )
 end
 
 15.times do |n|
-  Event.create!(
-    user: User.offset(rand(Event.count)).first,
-    date: "2021/#{rand(1..12)}/#{rand(1..25)}",
-    title: Faker::Games::SuperMario.character,
-    content: Faker::Games::SuperMario.character,
-    start_point: Faker::Games::SuperMario.location,
-    goal_point: Faker::Games::SuperMario.location,
-    status: "車",
-    carry_price: "#{rand(10)}00",
-               )
+  gimei = Gimei.new
+  gimei_goarl_point = gimei.address.town.kanji
+  user_name = User.offset(rand(Event.count)).first
+  unless user_name.nil?
+    Event.create!(
+      user: user_name,
+      date: "2022/#{rand(1..12)}/#{rand(1..25)}",
+      title: "#{gimei_goarl_point}まで行きます",
+      content: "#{gimei_goarl_point}まで行きます！乗っていきませんか？",
+      start_point: gimei.address.prefecture.kanji,
+      goal_point: gimei_goarl_point,
+      status: "車",
+      carry_price: "#{rand(10)}00",
+                 )
+  end
 end
 
 15.times do |n|
-  Event.create!(
-    user: User.offset(rand(Event.count)).first,
-    date: "2021/#{rand(1..12)}/#{rand(1..25)}",
-    title: Faker::Games::SuperMario.character,
-    content: Faker::Games::SuperMario.character,
-    start_point: Faker::Games::SuperMario.location,
-    goal_point: Faker::Games::SuperMario.location,
-    status: "乗",
-    carry_price: "#{rand(10)}00",
-               )
+  gimei = Gimei.new
+  gimei_goarl_point = gimei.address.town.kanji
+  user_name = User.offset(rand(Event.count)).first
+  unless user_name.nil?
+    Event.create!(
+      user: user_name,
+      date: "2022/#{rand(1..12)}/#{rand(1..25)}",
+      title: "#{gimei_goarl_point}まで乗せてください",
+      content: "#{gimei_goarl_point}まで行きたいのですがどなたか通りませんか？",
+      start_point: gimei.address.prefecture.kanji,
+      goal_point: gimei_goarl_point,
+      status: "乗",
+      carry_price: "#{rand(10)}00",
+                 )
+  end
 end

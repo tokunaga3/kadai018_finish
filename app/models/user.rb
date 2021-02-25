@@ -1,13 +1,10 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :user_events, dependent: :destroy
   has_many :events, through: :user_events
   validates:name,presence: true
   has_many :events, dependent: :destroy
-  # scope :participat, -> current_user_id{ where(participat_id:current_user_id) }
   mount_uploader :image, ImageUploader
 
   has_many :active_relationships, foreign_key: 'follower_id', class_name: 'Relationship', dependent: :destroy
