@@ -15,11 +15,6 @@ class UsersController < ApplicationController
   def edit
   end
 
-  # def destroy
-  #   @user.destroy
-  #   redirect_to users_path, notice:"イベントを削除しました！"
-  # end
-
   def update
     if @user.update(user_params)
       redirect_to users_path, notice: "ユーザ情報を編集しました"

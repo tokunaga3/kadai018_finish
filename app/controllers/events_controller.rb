@@ -1,12 +1,12 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  # ログインしているかどうかを判定
   before_action :user_signed_in?
   before_action :authenticate_user!
+  PER = 10
 
   def index
     @q = Event.ransack(params[:q])
-    @events = @q.result(distinct: true)
+    @events = @q.result(distinct: true).page(params[:page]).per(PER)
   end
 
   def new
