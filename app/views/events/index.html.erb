@@ -1,34 +1,34 @@
-<button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to 'イベントを登録する', new_event_path %></a></button>
-<button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to 'マイページ', users_path %></a></button>
 
-<h1 class="display-3">イベント一覧</h1>
 <%= search_form_for @q do |f| %>
   <div class="container">
     <div class="row">
       <div class="col">
-        <ul>
-          <li><%= f.label :title, "タイトル" %></li>
-          <li><%= f.search_field :title_cont %></li>
-          <li><%= f.label :date, "日付" %></li>
-          <li><%= f.date_field :date_gteq %>〜
-              <%= f.date_field :date_lt %></li>
-          <table>
-            <tr>
-              <li><%= f.label :status %></li>
-              <td><%= f.radio_button :status_eq, '', {:checked => true} %>指定なし</td>
-              <td><%= f.radio_button :status_eq, 1 %>車</td>
-              <td><%= f.radio_button :status_eq, 2 %>乗</td>
-            </tr>
-          </table>
+        <div class="form-group">
+          <%= f.label :title, "タイトル" %>
+          <%= f.search_field :title_cont %>
+        </div>
+        <div class="form-group">
+          <%= f.label :date, "日付" %>
+          <%= f.date_field :date_gteq %>〜
+          <%= f.date_field :date_lt %>
+        </div>
+        <div class="form-group">
+          <%= f.label :status %>
+          <%= f.radio_button :status_eq, '', {:checked => true} %>指定なし
+          <%= f.radio_button :status_eq, 1 %>車
+          <%= f.radio_button :status_eq, 2 %>乗
+        </div>
       </div>
       <div class="col">
-            <li><%= f.label :start_point, "スタート地点" %></li>
-            <li><%= f.search_field :start_point_cont %></li>
-
-            <li><%= f.label :goal_point, "ゴール地点" %></li>
-            <li><%= f.search_field :goal_point_cont %></li>
-            <li id="index_submit"><%= f.submit "検索" %></li>
-        </ul>
+        <div class="form-group">
+          <%= f.label :start_point, "スタート地点" %>
+          <%= f.search_field :start_point_cont %>
+        </div>
+        <div class="form-group">
+          <%= f.label :goal_point, "ゴール地点" %>
+          <%= f.search_field :goal_point_cont %>
+        </div>
+              <%= f.submit "検索" %>
       </div>
     </div>
   </div>

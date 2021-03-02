@@ -14,11 +14,17 @@
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
     <% if user_signed_in? %>
-      <button type="button" class="btn btn-outline-danger" id="hedder_right"><a href="#" class="text-danger"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></a></button>
-      <% unless action_name == "index" && controller_name == "events" %>
-        <button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to '投稿一覧', events_path %></a></<button>
-      <% end %>
-      <button type="button" class="btn btn-outline-primary" id="hedder_left"><%= link_to '戻る', 'javascript:history.back()' %></button>
+      <header>
+        <nav>
+          <ul class="clearfix herder_menu">
+            <li id="assy" class="hedder_left"><%= link_to 'Assy', events_path %></li>
+            <li class="hedder_right"><%= link_to "ログアウト", destroy_user_session_path, method: :elete %></li>
+            <li class="hedder_right"><%= link_to 'イベントを登録する', new_event_path %></li>
+            <li class="hedder_right"><%= link_to 'マイページ', users_path %></li>
+          </ul>
+        </nav>
+      </header>
+      <%= link_to '戻る', 'javascript:history.back()' %>
     <% else %>
     <% end %>
     <%= yield %>

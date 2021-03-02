@@ -15,14 +15,65 @@
  *= require_self
  */
 
-#hedder_left{
-  margin-left: 5px;
-  margin-right: 5px;
-}
 li{
   list-style: none;
 }
 
 #index_submit{
   margin-top:20px;
+}
+
+/* .hedder_left{
+  margin: 5px; */
+  /* margin-right: 5px; */
+  /* float: left; */
+  /* display: block; */
+/* } */
+
+.hedder_right{
+  float: right;
+  color: white;
+  /* margin: 5px; */
+  margin-left:40px;
+}
+
+header{
+  background-color: rgb(241, 165, 18);
+  /* float:left; */
+  height: 5rem;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ul{
+  margin: 0;
+  padding: 2%;
+}
+
+.herder_menu li a{
+color: #fff;
+text-decoration: none;
+}
+
+.herder_menu li a:hover {
+  text-decoration: underline;
+}
+
+.herder_menu{
+  /* position:static; */
+  position: relative;
+
+}
+#assy{
+  font-size: 50px;
+  /* padding-bottom; */
+  float: left;
+  /* margin:auto; */
+  position: absolute;
+  top:0px;
+  left:20px;
 }
