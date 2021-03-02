@@ -9,7 +9,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class='<%= controller.controller_name %>'>
+  <!-- <body>  -->
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
@@ -18,7 +19,7 @@
         <nav>
           <ul class="clearfix herder_menu">
             <li id="assy" class="hedder_left"><%= link_to 'Assy', events_path %></li>
-            <li class="hedder_right"><%= link_to "ログアウト", destroy_user_session_path, method: :elete %></li>
+            <li class="hedder_right"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
             <li class="hedder_right"><%= link_to 'イベントを登録する', new_event_path %></li>
             <li class="hedder_right"><%= link_to 'マイページ', users_path %></li>
           </ul>
@@ -27,6 +28,7 @@
       <%= link_to '戻る', 'javascript:history.back()' %>
     <% else %>
     <% end %>
-    <%= yield %>
-  </body>
+       <%= yield %>
+    <!-- </body> -->
+    </body>
 </html>
