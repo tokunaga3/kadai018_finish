@@ -1,6 +1,3 @@
-<button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to "マイページを編集する", edit_user_path(@user) %></a></button>
-<button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to "マイページを確認する", user_path(@user) %></a></button>
-
 <h1 class="display-3">マイページ</h1>
 <% unless @user.image.url.nil?%>
 <p class="lead float-right" id="user_image"><%= image_tag @user.image.url, :size =>'300x300' %></p>
