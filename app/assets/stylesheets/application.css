@@ -91,3 +91,21 @@ text-decoration: none;
   height: 35rem;
   padding-top:3rem;
 }
+
+.registrations{
+  background-color: rgb(242, 107, 8);
+  background-image: url("/images/driving_blue.png");
+}
+
+.registrations_new{
+  text-align: center;
+  background-color: white;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  height: 35rem;
+  padding-top:3rem;
+}
+
+.field2 p{
+  margin-bottom: 0;
+}
