@@ -1,9 +1,9 @@
 <h1 class="display-3">マイページ</h1>
 <% unless @user.image.url.nil?%>
-<p class="lead float-right" id="user_image"><%= image_tag @user.image.url, :size =>'300x300' %></p>
-<br>
+  <p class="lead float-right" id="user_image"><%= image_tag @user.image.url, :size =>'300x300' %></p>
+  <br>
 <% else %>
-<p class="lead user_data">プロフィール画像：（なし）</p>
+  <p class="lead user_data">プロフィール画像：（なし）</p>
 <% end %>
     <p class="lead user_data">名前 : <%= @user.name %></p>
     <p class="lead user_data">メールアドレス : <%= @user.email %></p>

@@ -109,3 +109,8 @@ text-decoration: none;
 .field2 p{
   margin-bottom: 0;
 }
+
+#guest_button a{
+  color: #fff;
+  text-decoration: none;
+}
