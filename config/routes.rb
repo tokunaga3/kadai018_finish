@@ -9,6 +9,10 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
+
+  resources :conversations do
+    resources :messages
+  end
   resources :events
   resources :relationships, only: [:create, :destroy]
 end

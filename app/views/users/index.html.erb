@@ -1,3 +1,15 @@
+<h2>ユーザー</h2>
+<% @users.each do |user| %>
+  <% if user.id != current_user.id %>
+    <li>
+      <div class="item">
+        <%= link_to user.name, user %>
+        <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post %>
+      </div>
+    </li>
+  <% end %>
+<% end %>
+
 <h1 class="display-3">マイページ</h1>
 <% unless @user.image.url.nil?%>
   <p class="lead float-right" id="user_image"><%= image_tag @user.image.url, :size =>'300x300' %></p>
