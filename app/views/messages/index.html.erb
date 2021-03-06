@@ -1,3 +1,31 @@
+<% @user = User.find(@conversation[:recipient_id]) %>
+<p class="lead">この主催者のイベント情報</p>
+<table class="table">
+  <tr>
+    <th>日付</th>
+    <th>type</th>
+    <th>スタート</th>
+    <th>ゴール</th>
+    <th>金額</th>
+    <th>タイトル</th>
+    <th>投稿者</th>
+    <th></th>
+  </tr>
+  <% @user.events.each_with_index do |user_event,ids| %>
+    <tr>
+      <td><%= l user_event.date %></td>
+      <td><%= user_event.status %></td>
+      <td><%= user_event.start_point %></td>
+      <td><%= user_event.goal_point %></td>
+      <td><%= user_event.carry_price %></td>
+      <td><%= user_event.title %></td>
+      <td><%= user_event.user.name %></td>
+      <td class="link"><%= link_to "イベントの詳細", event_path(user_event) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>主催イベントについて聞きたい事がある時は日付とタイトルもお付けください</p>
 <% if @over_ten %>
   <%= link_to '以前のメッセージ', '?m=all' %>
 <% end %>
