@@ -5,17 +5,17 @@ class MessagesController < ApplicationController
 
   def index
     @messages = @conversation.messages
-      if @messages.length > 10
-        @over_ten = true
-        @messages = Message.where(id: @messages[-10..-1].pluck(:id))
-      end
-      if params[:m]
-        @over_ten = false
-        @messages = @conversation.messages
-      end
-      if @messages.last
-        @messages.where.not(user_id: current_user.id).update_all(read: true)
-      end
+    if @messages.length > 10
+      @over_ten = true
+      @messages = Message.where(id: @messages[-10..-1].pluck(:id))
+    end
+    if params[:m]
+      @over_ten = false
+      @messages = @conversation.messages
+    end
+    if @messages.last
+      @messages.where.not(user_id: current_user.id).update_all(read: true)
+    end
     @messages = @messages.order(:created_at)
     @message = @conversation.messages.build
   end
@@ -31,6 +31,6 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:body, :user_id ,:event_id)
+    params.require(:message).permit(:body, :user_id)
   end
 end

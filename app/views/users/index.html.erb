@@ -1,5 +1,6 @@
 
 <h1 class="display-3">マイページ</h1>
+<%= link_to "マイページ編集" ,edit_user_path(@user) %>
 <% unless @user.image.url.nil?%>
   <p class="lead float-right" id="user_image"><%= image_tag @user.image.url, :size =>'300x300' %></p>
   <br>
@@ -10,7 +11,6 @@
     <p class="lead user_data">メールアドレス : <%= @user.email %></p>
     <p class="lead user_data">自己紹介文 : <%= @user.user_content %></p>
     <p class="lead ">住まい : <%= @user.address %></p>
-
 <br>
 
 <table class="table" id="table_follow">
@@ -46,6 +46,18 @@
     <% end %>
   <% end %>
 </table>
+<br>
+<<p>メッセージのやり取りをする</p>
+<% @users.each do |user| %>
+  <% if user.id != current_user.id %>
+    <li>
+      <div class="item">
+        <%= link_to user.name, user %>
+        <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post %>
+      </div>
+    </li>
+    <% end %>
+  <% end %>
 
 <br>
 <p class="lead">参加中のイベント</p>

@@ -8,9 +8,9 @@ class Conversation < ApplicationRecord
  validates_uniqueness_of :sender_id, scope: :recipient_id
  # 下記で解説
  scope :between, -> (sender_id,recipient_id) do
-   where("(conversations.sender_id = ? AND conversations.recipient_id =?) OR (conversations.sender_id = ? AND  conversations.recipient_id =?)", sender_id,recipient_id, recipient_id, sender_id)
+   where(["(conversations.sender_id = ? AND conversations.recipient_id = ?) OR (conversations.sender_id = ? AND conversations.recipient_id = ?)", sender_id ,recipient_id, recipient_id, sender_id])
  end
- # 下記で解説
+  # 下記で解説
  def target_user(current_user)
    if sender_id == current_user.id
      User.find(recipient_id)

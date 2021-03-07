@@ -17,11 +17,6 @@
 <p class="lead">メールアドレス : <%= @user.email %></p>
 <p class="lead">自己紹介文 : <%= @user.user_content %></p>
 <p class="lead">住まい : <%= @user.address %></p>
-<li>
-  <div class="item">
-    <%= link_to 'メッセージのやり取りをする', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: :post %>
-  </div>
-</li>
 <p class="lead">この主催者のイベント情報</p>
 <table class="table">
   <tr>
