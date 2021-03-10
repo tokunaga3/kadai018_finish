@@ -47,18 +47,18 @@
   <% end %>
 </table>
 <br>
-<<p>メッセージのやり取りをする</p>
-<% @users.each do |user| %>
-  <% if user.id != current_user.id %>
-    <li>
-      <div class="item">
-        <%= link_to user.name, user %>
-        <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post %>
-      </div>
-    </li>
+<div class="message">
+  <p>メッセージのやり取りをする</p>
+  <% @users.each do |user| %>
+    <% if user.id != current_user.id %>
+      <li>
+        <div class="item">
+          <%= link_to "#{user.name}にメッセージ", conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post %>
+        </div>
+      </li>
     <% end %>
   <% end %>
-
+</div>
 <br>
 <p class="lead">参加中のイベント</p>
 <table class="table">

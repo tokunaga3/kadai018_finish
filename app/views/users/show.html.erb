@@ -6,14 +6,11 @@
   <p class="lead">プロフィール画像：（なし）</p>
 <% end %>
 
-<table>
-  <tr>
-    <td class="lead">名前 : <%= @user.name %></td>
+    <li>名前 : <%= @user.name %>
     <% unless current_user.id == @user.id%>
-      <td><%= render 'follow_form', user: @user %></td>
+      <%= render 'follow_form', user: @user %>
     <% end %>
-  </tr>
-</table>
+    </li>
 <p class="lead">メールアドレス : <%= @user.email %></p>
 <p class="lead">自己紹介文 : <%= @user.user_content %></p>
 <p class="lead">住まい : <%= @user.address %></p>
