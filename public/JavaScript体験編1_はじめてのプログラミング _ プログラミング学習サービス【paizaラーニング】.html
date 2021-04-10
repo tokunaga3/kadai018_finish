@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://paiza.jp/works/javascript/trial/javascript-trial-1/63001 -->
+<html lang="ja" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style class="vjs-styles-dimensions">
+      .movie_player-dimensions {
+        width: 960px;
+        height: 540px;
+      }
+
+      .movie_player-dimensions.vjs-fluid {
+        padding-top: 56.25%;
+      }
+    </style>
+
+<script type="text/javascript" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/dfdae4dcc8"></script><script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/nr-1198.min.js.ダウンロード"></script><script type="text/javascript" async="" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/js"></script><script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/1217309881982600" async=""></script><script async="" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/fbevents.js.ダウンロード"></script><script type="text/javascript" async="" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/f.txt"></script><script type="text/javascript" async="" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/f.txt"></script><script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/sdk.js.ダウンロード" async="" crossorigin="anonymous"></script><script async="" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/analytics.js.ダウンロード"></script><script async="" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/gtm.js.ダウンロード"></script><script id="facebook-jssdk" async="" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/sdk.js(1).ダウンロード"></script><script id="twitter-wjs" async="" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/widgets.js.ダウンロード"></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"dfdae4dcc8","applicationID":"83297268","transactionName":"cl4MRUBfD1pRExYUXUNaER5RWAJGQARL","queueTime":0,"applicationTime":680,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"dfdae4dcc8",applicationID:"83297268"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(6),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(y,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1198.min.js"},h=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:h,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var x=0},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(7),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<title>JavaScript体験編1:はじめてのプログラミング | プログラミング学習サービス【paizaラーニング】</title>
+<link rel="icon" type="image/x-icon" href="https://paiza.jp/images/icons/learning/favicon.ico">
+<meta name="description" content="JavaScriptを使ったプログラムを体験します。はじめてなので、簡単なメッセージを表示するプログラムを書いてみましょう。｜環境構築不要、5秒で始められるプログラミング学習サイト【paizaラーニング】">
+<meta name="keywords" content="プログラミング,学習,php,教育,プログラム,コード,練習問題,演習課題,webサービス">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="JavaScript体験編1:はじめてのプログラミング">
+<meta property="og:image" content="https://paiza.jp/images/ogp/og_paiza_works.png">
+<meta property="og:type" content="company">
+<meta property="og:url" content="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001">
+<meta property="og:site_name" content="プログラミング学習サービス【paizaラーニング】">
+<meta property="og:description" content="JavaScriptを使ったプログラムを体験します。はじめてなので、簡単なメッセージを表示するプログラムを書いてみましょう。｜環境構築不要、5秒で始められるプログラミング学習サイト【paizaラーニング】">
+<meta property="og:locale" content="ja_JP">
+<meta property="fb:app_id" content="896098410425951">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp,noydir">
+<meta name="copyright" content="Copyright Paiza, Inc. All rights reserved.">
+<link href="https://paiza.jp/images/icons/learning/apple-touch-icon.png" rel="apple-touch-icon" sizes="192x192">
+<meta content="paiza" name="application-name">
+<meta content="/images/icons/learning/small.jpg" name="msapplication-square70x70logo">
+<meta content="/images/icons/learning/medium.jpg" name="msapplication-square150x150logo">
+<meta content="/images/icons/learning/wide.jpg" name="msapplication-wide310x150logo">
+<meta content="/images/icons/learning/large.jpg" name="msapplication-square310x310logo">
+<link rel="stylesheet" media="screen" href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/font-awesome.min.css">
+<link href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/css" rel="stylesheet">
+<link href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/jquery-ui.min.css" rel="stylesheet">
+<link href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/bootstrap.min.css" rel="stylesheet">
+<link href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/animate.min.css" rel="stylesheet">
+<link href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/style.css" rel="stylesheet">
+<link href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/default.css" rel="stylesheet">
+<link href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/docs.css" rel="stylesheet">
+<link rel="stylesheet" media="screen" href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/colorbox-9a4aa599b8447e82b39fdfad572185c6416486c09cec13597b1d138dde6569b4.css">
+<link rel="stylesheet" media="screen" href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/application-161fcbcf4ab488c1836fce56a6afb2ace57415fd0bb9d5e4e7630c9390751993.css">
+<link rel="stylesheet" media="screen" href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/common-84257872ef8ef34cbf72bb004edafaccbce1e9935aba60ae513ce9ffd1f00e15.css">
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/jquery-1.9.1.min.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/jquery-migrate-1.1.0.min.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/jquery-ui.min.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/bootstrap.min.js.ダウンロード"></script>
+<!--[if lt IE 9]>
+<script src="/deprecated/crossbrowserjs/vendor/html5shiv.js"></script>
+<script src="/deprecated/crossbrowserjs/vendor/respond.min.js"></script>
+<script src="/deprecated/crossbrowserjs/vendor/excanvas.min.js"></script>
+<![endif]-->
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/jquery.slimscroll.min.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/jquery.cookie-093bf83a74d6e0348a93cea2409096741ae95894e98697f263245ef48d9bfd8e.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/apps.min.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/rails-ujs-6c0f2be3d6318fcec13a387bbd49b1043477aed7f7dbddc5ca0ea2a9fa066a8a.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/sweet-alert-confirm-20649be890b50f35075c08c4b3c7e612d325637598544e3c55596f8f5f027ed9.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/colorbox-6edb6d440d6a3bfcb9ea76b5fbb845b05ac9930e2613e2bd9adfb79cba1f0dfe.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/application-c033f8735bee0721d9cbb032e038b47d1bc2747115b39db8fbe6d5da8d8d6dcb.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/social_button-af13c1dec1b99b916683daa40f549210fb181e60d8c24d26e8a3e4b34b30d953.js.ダウンロード"></script>
+<link rel="stylesheet" media="screen" href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/works-d95870c4d307e3986a7fff654f699ed82f31a4ecc8d6c46fe4c1fa13fbc92cd2.css">
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/ace-e091cbfc6817938e54981aaa1c77a10c860cf86161c4ec6c30d42ff4ef3f224c.js.ダウンロード"></script><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/ext-language_tools-55905cb97b82c3aa47dc58cc1a347578138b9de5767c44bb12d98057e6cf1aac.js.ダウンロード"></script><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);}.ace_editor.ace_autocomplete .ace_line-hover {    position: absolute;    z-index: 2;}.ace_editor.ace_autocomplete .ace_scroller {   background: none;   border: none;   box-shadow: none;}.ace_rightAlignedText {    color: gray;    display: inline-block;    position: absolute;    right: 4px;    text-align: right;    z-index: -1;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #000;    text-shadow: 0 0 0.01em;}.ace_editor.ace_autocomplete {    width: 280px;    z-index: 200000;    background: #fbfbfb;    color: #444;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;}</style>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/ace_editor-1d3c9ae07851dee5428385226b0f73cafffd3828fcdd835ed45157222c9ae81e.js.ダウンロード"></script>
+<link rel="stylesheet" media="screen" href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/works_layout_default-10e96f8bde44cbe7b529b71f172ed89eaa4896a2a166ff947c6dca43bc63a7a3.css">
+<link rel="stylesheet" media="screen" href="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/video-js.css">
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/video.js.ダウンロード"></script>
+
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="BjZ5J+ha8hmy1KQJM8qSnQiz1Po0O4C/zReVk1dm7B/fDfdvN2yto4UNE2KMobb0hL1cudUWz/lEgd4IHsXbyg==">
+<script>
+dataLayer = [{'applicant_status_for_optimazier': '2001'}];
+</script>
+<!-- Anti-flicker snippet (recommended)  -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-544Q3L4':true});</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQKX7WN');</script>
+<!-- End Google Tag Manager -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-42027263-1', 'auto');
+ga('require', 'GTM-544Q3L4');
+ga('set', 'userId', '37e31cc3fbc31090');
+ga('set', 'dimension1', '1');
+ga('set', 'dimension2', '2001');
+ga('set', 'dimension3', '1804');
+ga('set', 'dimension4', 'works');
+ga('send', 'pageview');
+</script>
+<script>
+  (function() {
+    this.gaq_push = function(args) {
+      var hit_type, mkargs;
+      if (args == null) {
+        args = [];
+      }
+      mkargs = {};
+      hit_type = '';
+      args.forEach(function(n, i) {
+        if (i === 0) {
+          if (n === '_trackEvent') {
+            hit_type = 'event';
+          } else if (n === '_trackPageview') {
+            hit_type = 'pageview';
+          }
+          return mkargs.hitType = hit_type;
+        } else if (i === 1) {
+          if (hit_type === 'event') {
+            return mkargs.eventCategory = n.toString();
+          } else if (hit_type === 'pageview') {
+            return mkargs.page = n.toString();
+          }
+        } else if (i === 2) {
+          return mkargs.eventAction = n.toString();
+        } else if (i === 3) {
+          return mkargs.eventLabel = n.toString();
+        } else if (i === 4) {
+          return mkargs.eventValue = parseInt(n);
+        }
+      });
+      if (typeof ga !== "undefined" && ga !== null) {
+        return ga('send', mkargs);
+      } else {
+        return console.log(mkargs);
+      }
+    };
+  
+  }).call(this);
+</script>
+
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/theme-solarized_light.js.ダウンロード"></script><script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/mode-javascript.js.ダウンロード"></script><script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/text.js.ダウンロード"></script><style id="ace-solarized-light">.ace-solarized-light .ace_gutter {background: #fbf1d3;color: #333}.ace-solarized-light .ace_print-margin {width: 1px;background: #e8e8e8}.ace-solarized-light {background-color: #FDF6E3;color: #586E75}.ace-solarized-light .ace_cursor {color: #000000}.ace-solarized-light .ace_marker-layer .ace_selection {background: rgba(7, 54, 67, 0.09)}.ace-solarized-light.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #FDF6E3;}.ace-solarized-light .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-solarized-light .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(147, 161, 161, 0.50)}.ace-solarized-light .ace_marker-layer .ace_active-line {background: #EEE8D5}.ace-solarized-light .ace_gutter-active-line {background-color : #EDE5C1}.ace-solarized-light .ace_marker-layer .ace_selected-word {border: 1px solid #073642}.ace-solarized-light .ace_invisible {color: rgba(147, 161, 161, 0.50)}.ace-solarized-light .ace_keyword,.ace-solarized-light .ace_meta,.ace-solarized-light .ace_support.ace_class,.ace-solarized-light .ace_support.ace_type {color: #859900}.ace-solarized-light .ace_constant.ace_character,.ace-solarized-light .ace_constant.ace_other {color: #CB4B16}.ace-solarized-light .ace_constant.ace_language {color: #B58900}.ace-solarized-light .ace_constant.ace_numeric {color: #D33682}.ace-solarized-light .ace_fold {background-color: #268BD2;border-color: #586E75}.ace-solarized-light .ace_entity.ace_name.ace_function,.ace-solarized-light .ace_entity.ace_name.ace_tag,.ace-solarized-light .ace_support.ace_function,.ace-solarized-light .ace_variable,.ace-solarized-light .ace_variable.ace_language {color: #268BD2}.ace-solarized-light .ace_storage {color: #073642}.ace-solarized-light .ace_string {color: #2AA198}.ace-solarized-light .ace_string.ace_regexp {color: #D30102}.ace-solarized-light .ace_comment,.ace-solarized-light .ace_entity.ace_other.ace_attribute-name {color: #93A1A1}.ace-solarized-light .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYHjy8NJ/AAjgA5fzQUmBAAAAAElFTkSuQmCC) right repeat-y}
+/*# sourceURL=ace/css/ace-solarized-light */</style><script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/javascript.js.ダウンロード"></script><script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/f(1).txt"></script><script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/f(2).txt"></script><style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, "hiragino kaku gothic pro",meiryo,"ms pgothic",sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+<input type="hidden" name="current_url" id="current_url" value="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001">
+<div class="fade in hide" id="page-loader">
+<span class="spinner"></span>
+</div>
+<div class="fade page-sidebar-minified page-sidebar-fixed page-header-fixed page-content-full-height in" id="page-container">
+<div class="header navbar navbar-default navbar-fixed-top" id="header" style="min-width: 1180px">
+<div class="container-fluid">
+<div class="navbar-header pull-left" style="width: 900px; height: 55px;">
+<div class="row" style="height: 100%; overflow: hidden;">
+<div class="col-sm-2" style="height: 100%; display: flex; align-items: center;">
+<a href="https://paiza.jp/works"><img width="131px" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/color-a39b3989b487ac3d9f477583551f7a19001f477a0e23a7f08c0c718b0c5c581a.png" alt="Color"></a>
+</div>
+<div class="col-sm-3">
+<div style="position: relative;">
+<div style="position: absolute; top: 0; bottom: 0; margin: auto;">
+<h1 class="chapter-title text-ellipsis">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1">JavaScript体験編1: JavaScriptをはじめよう</a>
+</h1>
+</div>
+</div>
+</div>
+<div class="col-sm-5">
+<div class="row" style="white-space: nowrap;">
+<div class="col-sm-6">
+<div class="lesson-meter">
+<div style="position: relative;">
+<div class="progress progress-striped progress-sm m-t-5">
+<div class="progress-bar progress-bar-success" style="width: 0%"></div>
+</div>
+<div style="position: absolute; top: -5px; right: -36px;">
+0%
+</div>
+</div>
+<div style="position: absolute; top: 5pt;">
+JavaScript体験編
+(全1レッスン)の進捗度
+</div>
+
+</div>
+</div>
+<div class="col-sm-6">
+<div style="display: inline; padding-left: 50px;">
+<span style="padding-top: 3px;">
+学習レベル1
+</span>
+<img alt="村人" title="村人" width="55px" height="55px" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/f10-499be66df8d1778c878d6e3da084b2f91a1fac45791e6a8aabd36d8392154e3f.png">
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-2">
+<button class="navbar-toggle" data-click="sidebar-toggled" type="button">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+</div>
+</div>
+<ul class="nav navbar-nav navbar-right navbar-wrap">
+<li class="dropdown navbar-user">
+<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+<span class="hidden-xs">設定</span>
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu animated fadeInLeft">
+<li class="arrow"></li>
+<li><a href="https://paiza.jp/profile">プロフィール設定</a></li>
+<li><a href="https://paiza.jp/account">アカウント設定</a></li>
+<li class="divider"></li>
+<li><a rel="nofollow" data-method="delete" href="https://paiza.jp/logout">ログアウト</a></li>
+</ul>
+</li>
+</ul>
+<div class="prac_prog_box pull-right">
+<div class="prac_prog_wrap well">
+<div class="prac_prog_inner">
+<div class="prac_prog_no font10">演習1：</div>
+<div class="fontGray topStar top_star_a" data-n="1" data-placement="bottom" data-toggle="tooltip" title="" data-original-title="演習課題を受けてみましょう">★</div>
+</div>
+</div>
+<div class="prac_prog_wrap well">
+<div class="prac_prog_inner">
+<div class="prac_prog_no font10">演習2：</div>
+<div class="fontGray topStar top_star_a" data-n="2" data-placement="bottom" data-toggle="tooltip" title="" data-original-title="演習課題を受けてみましょう">★</div>
+</div>
+</div>
+<div class="prac_prog_wrap well">
+<div class="prac_prog_inner">
+<div class="prac_prog_no font10">演習3：</div>
+<div class="fontGray topStar top_star_a" data-n="3" data-placement="bottom" data-toggle="tooltip" title="" data-original-title="演習課題を受けてみましょう">★</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="sidebar" id="sidebar">
+<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div data-height="100%" data-scrollbar="true" style="overflow: hidden; width: auto; height: 100%;">
+<ul class="nav">
+<li class="nav-header">Navigation</li>
+<li class="has-sub">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1"><i class="fa fa-list-ul"></i>
+<span>グローバルナビ</span>
+</a><ul class="sub-menu">
+<li><a href="https://paiza.jp/works">トップ</a></li>
+<li><a target="_blank" href="https://paiza.jp/works/paid_plan_lp/society?from=global-navi">有料プラン</a></li>
+<li><a href="https://paiza.jp/challenges">スキルチェック</a></li>
+</ul>
+</li>
+<li class="has-sub active">
+<a href="javascript:;">
+<i class="fas fa-video"></i>
+<span>レッスン一覧</span>
+</a>
+<ul class="sub-menu">
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63000">01:プログラミングとは</a>
+</li>
+<li class="active">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001">02:はじめてのプログラミング</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63002">03:間違いやすいポイント</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63003">04:コメントを書く</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63004">05:数値を扱う</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63005">06:プログラムで計算する</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63006">07:変数にデータを入れる</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63007">08:データを受け取る</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63008">09:標準入力と標準出力</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63009">10:条件に一致したら処理を実行する</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63010">11:条件に合わせて処理を変える</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63011">12:数値を分類する</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63012">13:同じ処理を何度も繰り返す</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63013">14:複数のデータを受け取る</a>
+</li>
+<li class="">
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63014">15:複数のデータを分類する</a>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="slimScrollBar ui-draggable" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 603px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+</div>
+<div class="sidebar-bg"></div>
+<input type="hidden" name="work_lesson_type" id="work_lesson_type" value="javascript">
+<input type="hidden" name="work_lesson_stage" id="work_lesson_stage" value="trial">
+<input type="hidden" name="work_uid" id="work_uid" value="javascript-trial-1">
+<input type="hidden" name="problem_uid" id="problem_uid" value="63001">
+<input type="hidden" name="lang_id" id="lang_id" value="2308">
+<input type="hidden" name="lang_name" id="lang_name">
+<input type="hidden" name="operating_mode" id="operating_mode" value="0">
+<input type="hidden" name="practice_no" id="practice_no" value="0">
+<input type="hidden" name="show_input" id="show_input" value="1">
+<div id="works" data-work-problem="{&quot;id&quot;:63001,&quot;uid&quot;:63001,&quot;no&quot;:2,&quot;work_uid&quot;:&quot;javascript-trial-1&quot;,&quot;state_id&quot;:1,&quot;title&quot;:&quot;はじめてのプログラミング&quot;,&quot;description&quot;:&quot;\nJavaScript を使ったプログラムを体験します。はじめてなので、簡単なメッセージを表示するプログラムを書いてみましょう。\n\n&quot;,&quot;default_input&quot;:null,&quot;default_output&quot;:null,&quot;deleted_at&quot;:null,&quot;created_at&quot;:&quot;2021-03-09T06:07:17.000+09:00&quot;,&quot;updated_at&quot;:&quot;2021-03-09T06:34:43.000+09:00&quot;,&quot;default_output_type&quot;:null,&quot;layout_type&quot;:0,&quot;show_enquete&quot;:false,&quot;display_tutorial_link&quot;:false,&quot;free_content&quot;:true,&quot;not_login_content&quot;:true,&quot;show_input&quot;:true}" data-can-be-played="true"></div>
+<div class="content content-full-width" id="content">
+<textarea name="init_default_code" id="init_default_code" style="display: none" class="init_default_code_0"></textarea>
+<textarea name="default_code" id="default_code" style="display: none" class="default_code_0"></textarea>
+<input type="hidden" name="practice_case_num_0" id="practice_case_num_0" value="0">
+<input type="hidden" name="practice_case_num_1" id="practice_case_num_1" value="1">
+<textarea name="practice_init_default_code_1" id="practice_init_default_code_1" style="display: none" class="practice_init_default_code init_default_code_1" data-n="1">// メッセージを表示しよう</textarea>
+<textarea name="practice_default_code_1" id="practice_default_code_1" style="display: none" class="practice_default_code default_code_1" data-n="1">// メッセージを表示しよう</textarea>
+<input type="hidden" name="practice_case_num_2" id="practice_case_num_2" value="1">
+<textarea name="practice_init_default_code_2" id="practice_init_default_code_2" style="display: none" class="practice_init_default_code init_default_code_2" data-n="2">// メッセージを表示しよう</textarea>
+<textarea name="practice_default_code_2" id="practice_default_code_2" style="display: none" class="practice_default_code default_code_2" data-n="2">// メッセージを表示しよう</textarea>
+<input type="hidden" name="practice_case_num_3" id="practice_case_num_3" value="1">
+<textarea name="practice_init_default_code_3" id="practice_init_default_code_3" style="display: none" class="practice_init_default_code init_default_code_3" data-n="3">// メッセージを表示しよう</textarea>
+<textarea name="practice_default_code_3" id="practice_default_code_3" style="display: none" class="practice_default_code default_code_3" data-n="3">// メッセージを表示しよう</textarea>
+<div class="pretty-split-pane-frame">
+<div class="split-pane split-pane-component" id="split-pane-1" style="min-width: 0px;">
+<div class="split-pane fixed-left" id="split-pane-2" style="min-width: 105px;">
+<div class="split-pane-component" id="left-component">
+<div class="split-pane fixed-top" style="min-height: 115px;">
+<div class="split-pane-component" id="top-component1">
+<div class="pretty-split-pane-component-inner" id="left_top_box">
+<div class="lesson_content lesson_movie">
+<script>
+  (function() {
+    this.requestFullscreen = function(target, button) {
+      if ((document.webkitFullscreenElement != null) || (document.mozFullScreenElement != null) || (document.msFullscreenElement != null) || (document.fullScreenElement != null)) {
+        if (document.webkitCancelFullScreen != null) {
+          return document.webkitCancelFullScreen();
+        } else if (document.mozCancelFullScreen != null) {
+          return document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen != null) {
+          return document.msExitFullscreen();
+        } else if (document.cancelFullScreen != null) {
+          return document.cancelFullScreen();
+        } else if (document.exitFullscreen != null) {
+          return document.exitFullscreen();
+        }
+      } else {
+        if (target.webkitRequestFullscreen != null) {
+          return target.webkitRequestFullscreen();
+        } else if (target.mozRequestFullScreen != null) {
+          return target.mozRequestFullScreen();
+        } else if (target.msRequestFullscreen != null) {
+          return target.msRequestFullscreen();
+        } else if (target.requestFullscreen != null) {
+          return target.requestFullscreen();
+        } else {
+          return alert('ご利用のブラウザはフルスクリーン操作に対応していません');
+        }
+      }
+    };
+  
+  }).call(this);
+</script>
+<style>
+  #movie_player.video-js .vjs-big-play-button {
+    font-size: 500%;
+    top: auto;
+    bottom: 10px;
+  }
+</style>
+<div style="width: 100%; height: 99%;"><div id="movie_player" poster="https://i.vimeocdn.com/video/1068694019_640x360.jpg?r=pad" style="width: 100%; height: 100%;" data-setup="{&quot;preload&quot;:true}" class="video-js vjs-controls-enabled vjs-touch-enabled vjs-workinghover vjs-v7 movie_player-dimensions vjs-playing vjs-has-started vjs-user-inactive" tabindex="-1" role="region" lang="ja" aria-label="Video Player"><video class="vjs-tech" data-setup="{&quot;preload&quot;:true}" style="width: 100%; height: 100%;" poster="https://i.vimeocdn.com/video/1068694019_640x360.jpg?r=pad" id="movie_player_html5_api" tabindex="-1" role="application" preload="true" src="https://player.vimeo.com/play/2409722476?s=487988359_1615400790_4d8d0f2d88534ea55f7fa6dc9c858f9a&amp;loc=external&amp;context=Vimeo%5CController%5CApi%5CResources%5CVideoController.&amp;download=1&amp;filename=js-introduction2%253A%2B%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2580%2581%25E3%2581%25AF%25E3%2581%2598%25E3%2582%2581%25E3%2581%25AE%2B1%2B%25E6%25AD%25A9165.mp4"><source src="https://player.vimeo.com/play/2409722476?s=487988359_1615400790_4d8d0f2d88534ea55f7fa6dc9c858f9a&amp;loc=external&amp;context=Vimeo%5CController%5CApi%5CResources%5CVideoController.&amp;download=1&amp;filename=js-introduction2%253A%2B%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2580%2581%25E3%2581%25AF%25E3%2581%2598%25E3%2582%2581%25E3%2581%25AE%2B1%2B%25E6%25AD%25A9165.mp4" type="video/mp4" label="SD"></video><div class="vjs-poster" aria-disabled="false" style="background-image: url(&quot;https://i.vimeocdn.com/video/1068694019_640x360.jpg?r=pad&quot;);"></div><div class="vjs-text-track-display" aria-live="off" aria-atomic="true"><div style="position: absolute; inset: 0px; margin: 1.5%;"></div></div><div class="vjs-loading-spinner" dir="ltr"><span class="vjs-control-text">Video Player is loading.</span></div><button class="vjs-big-play-button" type="button" title="Play Video" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Play Video</span></button><div class="vjs-control-bar" dir="ltr"><button class="vjs-play-control vjs-control vjs-button vjs-playing" type="button" title="Pause" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Pause</span></button><div class="vjs-volume-panel vjs-control vjs-volume-panel-horizontal"><button class="vjs-mute-control vjs-control vjs-button vjs-vol-3" type="button" title="Mute" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Mute</span></button><div class="vjs-volume-control vjs-control vjs-volume-horizontal"><div tabindex="0" class="vjs-volume-bar vjs-slider-bar vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Volume Level" aria-live="polite" aria-valuetext="100%"><div class="vjs-volume-level"><span class="vjs-control-text"></span></div></div></div></div><div class="vjs-current-time vjs-time-control vjs-control"><span class="vjs-control-text" role="presentation">Current Time&nbsp;</span><span class="vjs-current-time-display" aria-live="off" role="presentation">1:03</span></div><div class="vjs-time-control vjs-time-divider" aria-hidden="true"><div><span>/</span></div></div><div class="vjs-duration vjs-time-control vjs-control"><span class="vjs-control-text" role="presentation">Duration&nbsp;</span><span class="vjs-duration-display" aria-live="off" role="presentation">3:51</span></div><div class="vjs-progress-control vjs-control"><div tabindex="0" class="vjs-progress-holder vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="27.39" aria-valuemin="0" aria-valuemax="100" aria-label="Progress Bar" aria-valuetext="1:03 of 3:51"><div class="vjs-load-progress" style="width: 57.88%;"><span class="vjs-control-text"><span>Loaded</span>: <span class="vjs-control-text-loaded-percentage">57.88%</span></span><div data-start="0" data-end="134.278" style="left: 0%; width: 100%;"></div></div><div class="vjs-mouse-display" style="left: 207.087px;"><div class="vjs-time-tooltip" aria-hidden="true" style="right: -8px;">1:47</div></div><div class="vjs-play-progress vjs-slider-bar" aria-hidden="true" style="width: 27.39%;"><div class="vjs-time-tooltip" aria-hidden="true" style="right: -17.7344px;">1:03</div></div></div></div><div class="vjs-live-control vjs-control vjs-hidden"><div class="vjs-live-display" aria-live="off"><span class="vjs-control-text">Stream Type&nbsp;</span>LIVE</div></div><button class="vjs-seek-to-live-control vjs-control" type="button" title="Seek to live, currently behind live" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Seek to live, currently behind live</span><span class="vjs-seek-to-live-text" aria-hidden="true">LIVE</span></button><div class="vjs-remaining-time vjs-time-control vjs-control"><span class="vjs-control-text" role="presentation">Remaining Time&nbsp;</span><span aria-hidden="true">-</span><span class="vjs-remaining-time-display" aria-live="off" role="presentation">2:48</span></div><div class="vjs-custom-control-spacer vjs-spacer ">&nbsp;</div><div class="vjs-playback-rate vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden"><div class="vjs-playback-rate-value">1x</div><button class="vjs-playback-rate vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Playback Rate" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Playback Rate</span></button><div class="vjs-workinghover">
+  <div class="vjs-playback-rate--free vjs-menu-button vjs-menu-button-popup vjs-control vjs-button" tabindex="0" role="menuitem" aria-live="polite" aria-expanded="false" aria-haspopup="true">
+    <div class="vjs-menu" role="presentation">
+      <div class="vjs-menu-content"><p class="vjs-menu-text-content">有料会員になると動画の速度を変更できます</p><p class="vjs-menu-text-content"><a class="js-goto-society" herf="/works/paid_plan_lp/society">有料プランへ</a></p></div>
+    </div>
+    <div class="vjs-playback-rate-value--free">再生速度</div>
+  </div>
+</div><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"></ul></div></div><div class="vjs-workinghover">
+  <div class="vjs-playback-rate--free vjs-menu-button vjs-menu-button-popup vjs-control vjs-button" tabindex="0" role="menuitem" aria-live="polite" aria-expanded="false" aria-haspopup="true">
+    <div class="vjs-menu" role="presentation">
+      <div class="vjs-menu-content"><p class="vjs-menu-text-content">有料会員になると動画の速度を変更できます</p><p class="vjs-menu-text-content"><a class="js-goto-society" herf="/works/paid_plan_lp/society">有料プランへ</a></p></div>
+    </div>
+    <div class="vjs-playback-rate-value--free">再生速度</div>
+  </div>
+</div><div class="vjs-chapters-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden"><button class="vjs-chapters-button vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Chapters" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Chapters</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-title">Chapters</li></ul></div></div><div class="vjs-descriptions-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden"><button class="vjs-descriptions-button vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Descriptions" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Descriptions</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-item vjs-selected" role="menuitemradio" aria-disabled="false" tabindex="-1" aria-checked="true"><span class="vjs-menu-item-text">descriptions off</span><span class="vjs-control-text" aria-live="polite">, selected</span></li></ul></div></div><div class="vjs-subs-caps-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden"><button class="vjs-subs-caps-button vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Subtitles" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Subtitles</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-item vjs-texttrack-settings" role="menuitem" aria-disabled="false" tabindex="-1"><span class="vjs-menu-item-text">subtitles settings</span><span class="vjs-control-text" aria-live="polite">, opens subtitles settings dialog</span></li><li class="vjs-menu-item vjs-selected" role="menuitemradio" aria-disabled="false" tabindex="-1" aria-checked="true"><span class="vjs-menu-item-text">subtitles off</span><span class="vjs-control-text" aria-live="polite">, selected</span></li></ul></div></div><div class="vjs-audio-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden"><button class="vjs-audio-button vjs-menu-button vjs-menu-button-popup vjs-button" type="button" aria-disabled="false" title="Audio Track" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Audio Track</span></button><div class="vjs-menu"><ul class="vjs-menu-content" role="menu"></ul></div></div><button class="vjs-picture-in-picture-control vjs-control vjs-button" type="button" title="Picture-in-Picture" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Picture-in-Picture</span></button><button class="vjs-fullscreen-control vjs-control vjs-button" type="button" title="Fullscreen" aria-disabled="false"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Fullscreen</span></button></div><div class="vjs-error-display vjs-modal-dialog vjs-hidden " aria-describedby="movie_player_component_363_description" aria-hidden="true" aria-label="Modal Window" role="dialog"><p class="vjs-modal-dialog-description vjs-control-text" id="movie_player_component_363_description">This is a modal window.</p><div class="vjs-modal-dialog-content" role="document"></div></div><div class="vjs-modal-dialog vjs-hidden  vjs-text-track-settings" aria-describedby="movie_player_component_368_description" aria-hidden="true" aria-label="Caption Settings Dialog" role="dialog"><p class="vjs-modal-dialog-description vjs-control-text" id="movie_player_component_368_description">Beginning of dialog window. Escape will cancel and close the window.</p><div class="vjs-modal-dialog-content" role="document"><div class="vjs-track-settings-colors"><fieldset class="vjs-fg-color vjs-track-setting"><legend id="captions-text-legend-movie_player_component_368">Text</legend><label id="captions-foreground-color-movie_player_component_368" class="vjs-label">Color</label><select aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-color-movie_player_component_368"><option id="captions-foreground-color-movie_player_component_368-White" value="#FFF" aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-color-movie_player_component_368 captions-foreground-color-movie_player_component_368-White">White</option><option id="captions-foreground-color-movie_player_component_368-Black" value="#000" aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-color-movie_player_component_368 captions-foreground-color-movie_player_component_368-Black">Black</option><option id="captions-foreground-color-movie_player_component_368-Red" value="#F00" aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-color-movie_player_component_368 captions-foreground-color-movie_player_component_368-Red">Red</option><option id="captions-foreground-color-movie_player_component_368-Green" value="#0F0" aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-color-movie_player_component_368 captions-foreground-color-movie_player_component_368-Green">Green</option><option id="captions-foreground-color-movie_player_component_368-Blue" value="#00F" aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-color-movie_player_component_368 captions-foreground-color-movie_player_component_368-Blue">Blue</option><option id="captions-foreground-color-movie_player_component_368-Yellow" value="#FF0" aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-color-movie_player_component_368 captions-foreground-color-movie_player_component_368-Yellow">Yellow</option><option id="captions-foreground-color-movie_player_component_368-Magenta" value="#F0F" aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-color-movie_player_component_368 captions-foreground-color-movie_player_component_368-Magenta">Magenta</option><option id="captions-foreground-color-movie_player_component_368-Cyan" value="#0FF" aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-color-movie_player_component_368 captions-foreground-color-movie_player_component_368-Cyan">Cyan</option></select><span class="vjs-text-opacity vjs-opacity"><label id="captions-foreground-opacity-movie_player_component_368" class="vjs-label">Transparency</label><select aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-opacity-movie_player_component_368"><option id="captions-foreground-opacity-movie_player_component_368-Opaque" value="1" aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-opacity-movie_player_component_368 captions-foreground-opacity-movie_player_component_368-Opaque">Opaque</option><option id="captions-foreground-opacity-movie_player_component_368-SemiTransparent" value="0.5" aria-labelledby="captions-text-legend-movie_player_component_368 captions-foreground-opacity-movie_player_component_368 captions-foreground-opacity-movie_player_component_368-SemiTransparent">Semi-Transparent</option></select></span></fieldset><fieldset class="vjs-bg-color vjs-track-setting"><legend id="captions-background-movie_player_component_368">Background</legend><label id="captions-background-color-movie_player_component_368" class="vjs-label">Color</label><select aria-labelledby="captions-background-movie_player_component_368 captions-background-color-movie_player_component_368"><option id="captions-background-color-movie_player_component_368-Black" value="#000" aria-labelledby="captions-background-movie_player_component_368 captions-background-color-movie_player_component_368 captions-background-color-movie_player_component_368-Black">Black</option><option id="captions-background-color-movie_player_component_368-White" value="#FFF" aria-labelledby="captions-background-movie_player_component_368 captions-background-color-movie_player_component_368 captions-background-color-movie_player_component_368-White">White</option><option id="captions-background-color-movie_player_component_368-Red" value="#F00" aria-labelledby="captions-background-movie_player_component_368 captions-background-color-movie_player_component_368 captions-background-color-movie_player_component_368-Red">Red</option><option id="captions-background-color-movie_player_component_368-Green" value="#0F0" aria-labelledby="captions-background-movie_player_component_368 captions-background-color-movie_player_component_368 captions-background-color-movie_player_component_368-Green">Green</option><option id="captions-background-color-movie_player_component_368-Blue" value="#00F" aria-labelledby="captions-background-movie_player_component_368 captions-background-color-movie_player_component_368 captions-background-color-movie_player_component_368-Blue">Blue</option><option id="captions-background-color-movie_player_component_368-Yellow" value="#FF0" aria-labelledby="captions-background-movie_player_component_368 captions-background-color-movie_player_component_368 captions-background-color-movie_player_component_368-Yellow">Yellow</option><option id="captions-background-color-movie_player_component_368-Magenta" value="#F0F" aria-labelledby="captions-background-movie_player_component_368 captions-background-color-movie_player_component_368 captions-background-color-movie_player_component_368-Magenta">Magenta</option><option id="captions-background-color-movie_player_component_368-Cyan" value="#0FF" aria-labelledby="captions-background-movie_player_component_368 captions-background-color-movie_player_component_368 captions-background-color-movie_player_component_368-Cyan">Cyan</option></select><span class="vjs-bg-opacity vjs-opacity"><label id="captions-background-opacity-movie_player_component_368" class="vjs-label">Transparency</label><select aria-labelledby="captions-background-movie_player_component_368 captions-background-opacity-movie_player_component_368"><option id="captions-background-opacity-movie_player_component_368-Opaque" value="1" aria-labelledby="captions-background-movie_player_component_368 captions-background-opacity-movie_player_component_368 captions-background-opacity-movie_player_component_368-Opaque">Opaque</option><option id="captions-background-opacity-movie_player_component_368-SemiTransparent" value="0.5" aria-labelledby="captions-background-movie_player_component_368 captions-background-opacity-movie_player_component_368 captions-background-opacity-movie_player_component_368-SemiTransparent">Semi-Transparent</option><option id="captions-background-opacity-movie_player_component_368-Transparent" value="0" aria-labelledby="captions-background-movie_player_component_368 captions-background-opacity-movie_player_component_368 captions-background-opacity-movie_player_component_368-Transparent">Transparent</option></select></span></fieldset><fieldset class="vjs-window-color vjs-track-setting"><legend id="captions-window-movie_player_component_368">Window</legend><label id="captions-window-color-movie_player_component_368" class="vjs-label">Color</label><select aria-labelledby="captions-window-movie_player_component_368 captions-window-color-movie_player_component_368"><option id="captions-window-color-movie_player_component_368-Black" value="#000" aria-labelledby="captions-window-movie_player_component_368 captions-window-color-movie_player_component_368 captions-window-color-movie_player_component_368-Black">Black</option><option id="captions-window-color-movie_player_component_368-White" value="#FFF" aria-labelledby="captions-window-movie_player_component_368 captions-window-color-movie_player_component_368 captions-window-color-movie_player_component_368-White">White</option><option id="captions-window-color-movie_player_component_368-Red" value="#F00" aria-labelledby="captions-window-movie_player_component_368 captions-window-color-movie_player_component_368 captions-window-color-movie_player_component_368-Red">Red</option><option id="captions-window-color-movie_player_component_368-Green" value="#0F0" aria-labelledby="captions-window-movie_player_component_368 captions-window-color-movie_player_component_368 captions-window-color-movie_player_component_368-Green">Green</option><option id="captions-window-color-movie_player_component_368-Blue" value="#00F" aria-labelledby="captions-window-movie_player_component_368 captions-window-color-movie_player_component_368 captions-window-color-movie_player_component_368-Blue">Blue</option><option id="captions-window-color-movie_player_component_368-Yellow" value="#FF0" aria-labelledby="captions-window-movie_player_component_368 captions-window-color-movie_player_component_368 captions-window-color-movie_player_component_368-Yellow">Yellow</option><option id="captions-window-color-movie_player_component_368-Magenta" value="#F0F" aria-labelledby="captions-window-movie_player_component_368 captions-window-color-movie_player_component_368 captions-window-color-movie_player_component_368-Magenta">Magenta</option><option id="captions-window-color-movie_player_component_368-Cyan" value="#0FF" aria-labelledby="captions-window-movie_player_component_368 captions-window-color-movie_player_component_368 captions-window-color-movie_player_component_368-Cyan">Cyan</option></select><span class="vjs-window-opacity vjs-opacity"><label id="captions-window-opacity-movie_player_component_368" class="vjs-label">Transparency</label><select aria-labelledby="captions-window-movie_player_component_368 captions-window-opacity-movie_player_component_368"><option id="captions-window-opacity-movie_player_component_368-Transparent" value="0" aria-labelledby="captions-window-movie_player_component_368 captions-window-opacity-movie_player_component_368 captions-window-opacity-movie_player_component_368-Transparent">Transparent</option><option id="captions-window-opacity-movie_player_component_368-SemiTransparent" value="0.5" aria-labelledby="captions-window-movie_player_component_368 captions-window-opacity-movie_player_component_368 captions-window-opacity-movie_player_component_368-SemiTransparent">Semi-Transparent</option><option id="captions-window-opacity-movie_player_component_368-Opaque" value="1" aria-labelledby="captions-window-movie_player_component_368 captions-window-opacity-movie_player_component_368 captions-window-opacity-movie_player_component_368-Opaque">Opaque</option></select></span></fieldset></div><div class="vjs-track-settings-font"><fieldset class="vjs-font-percent vjs-track-setting"><legend id="captions-font-size-movie_player_component_368" class="">Font Size</legend><select aria-labelledby="captions-font-size-movie_player_component_368"><option id="captions-font-size-movie_player_component_368-50" value="0.50" aria-labelledby="captions-font-size-movie_player_component_368 captions-font-size-movie_player_component_368-50">50%</option><option id="captions-font-size-movie_player_component_368-75" value="0.75" aria-labelledby="captions-font-size-movie_player_component_368 captions-font-size-movie_player_component_368-75">75%</option><option id="captions-font-size-movie_player_component_368-100" value="1.00" aria-labelledby="captions-font-size-movie_player_component_368 captions-font-size-movie_player_component_368-100">100%</option><option id="captions-font-size-movie_player_component_368-125" value="1.25" aria-labelledby="captions-font-size-movie_player_component_368 captions-font-size-movie_player_component_368-125">125%</option><option id="captions-font-size-movie_player_component_368-150" value="1.50" aria-labelledby="captions-font-size-movie_player_component_368 captions-font-size-movie_player_component_368-150">150%</option><option id="captions-font-size-movie_player_component_368-175" value="1.75" aria-labelledby="captions-font-size-movie_player_component_368 captions-font-size-movie_player_component_368-175">175%</option><option id="captions-font-size-movie_player_component_368-200" value="2.00" aria-labelledby="captions-font-size-movie_player_component_368 captions-font-size-movie_player_component_368-200">200%</option><option id="captions-font-size-movie_player_component_368-300" value="3.00" aria-labelledby="captions-font-size-movie_player_component_368 captions-font-size-movie_player_component_368-300">300%</option><option id="captions-font-size-movie_player_component_368-400" value="4.00" aria-labelledby="captions-font-size-movie_player_component_368 captions-font-size-movie_player_component_368-400">400%</option></select></fieldset><fieldset class="vjs-edge-style vjs-track-setting"><legend id="movie_player_component_368" class="">Text Edge Style</legend><select aria-labelledby="movie_player_component_368"><option id="movie_player_component_368-None" value="none" aria-labelledby="movie_player_component_368 movie_player_component_368-None">None</option><option id="movie_player_component_368-Raised" value="raised" aria-labelledby="movie_player_component_368 movie_player_component_368-Raised">Raised</option><option id="movie_player_component_368-Depressed" value="depressed" aria-labelledby="movie_player_component_368 movie_player_component_368-Depressed">Depressed</option><option id="movie_player_component_368-Uniform" value="uniform" aria-labelledby="movie_player_component_368 movie_player_component_368-Uniform">Uniform</option><option id="movie_player_component_368-Dropshadow" value="dropshadow" aria-labelledby="movie_player_component_368 movie_player_component_368-Dropshadow">Dropshadow</option></select></fieldset><fieldset class="vjs-font-family vjs-track-setting"><legend id="captions-font-family-movie_player_component_368" class="">Font Family</legend><select aria-labelledby="captions-font-family-movie_player_component_368"><option id="captions-font-family-movie_player_component_368-ProportionalSansSerif" value="proportionalSansSerif" aria-labelledby="captions-font-family-movie_player_component_368 captions-font-family-movie_player_component_368-ProportionalSansSerif">Proportional Sans-Serif</option><option id="captions-font-family-movie_player_component_368-MonospaceSansSerif" value="monospaceSansSerif" aria-labelledby="captions-font-family-movie_player_component_368 captions-font-family-movie_player_component_368-MonospaceSansSerif">Monospace Sans-Serif</option><option id="captions-font-family-movie_player_component_368-ProportionalSerif" value="proportionalSerif" aria-labelledby="captions-font-family-movie_player_component_368 captions-font-family-movie_player_component_368-ProportionalSerif">Proportional Serif</option><option id="captions-font-family-movie_player_component_368-MonospaceSerif" value="monospaceSerif" aria-labelledby="captions-font-family-movie_player_component_368 captions-font-family-movie_player_component_368-MonospaceSerif">Monospace Serif</option><option id="captions-font-family-movie_player_component_368-Casual" value="casual" aria-labelledby="captions-font-family-movie_player_component_368 captions-font-family-movie_player_component_368-Casual">Casual</option><option id="captions-font-family-movie_player_component_368-Script" value="script" aria-labelledby="captions-font-family-movie_player_component_368 captions-font-family-movie_player_component_368-Script">Script</option><option id="captions-font-family-movie_player_component_368-SmallCaps" value="small-caps" aria-labelledby="captions-font-family-movie_player_component_368 captions-font-family-movie_player_component_368-SmallCaps">Small Caps</option></select></fieldset></div><div class="vjs-track-settings-controls"><button type="button" class="vjs-default-button" title="restore all settings to the default values">Reset<span class="vjs-control-text"> restore all settings to the default values</span></button><button type="button" class="vjs-done-button">Done</button></div></div><button class="vjs-close-button vjs-control vjs-button" type="button" aria-disabled="false" title="Close Modal Dialog"><span aria-hidden="true" class="vjs-icon-placeholder"></span><span class="vjs-control-text" aria-live="polite">Close Modal Dialog</span></button><p class="vjs-control-text">End of dialog window.</p></div></div></div>
+
+</div>
+<div class="lesson_content lesson_practice disnon">
+<div class="panel-body">
+<ul class="m-b-0 nav nav-pills">
+<li class="active work_practice_li" data-n="1">
+<a id="practice-tab-1-btn" class="change_practice_tab" data-toggle="tab" data-n="1" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#practice-tab-1">演習1</a>
+</li>
+<li class="work_practice_li" data-n="2">
+<a id="practice-tab-2-btn" class="change_practice_tab" data-toggle="tab" data-n="2" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#practice-tab-2">演習2</a>
+</li>
+<li class="work_practice_li" data-n="3">
+<a id="practice-tab-3-btn" class="change_practice_tab" data-toggle="tab" data-n="3" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#practice-tab-3">演習3</a>
+</li>
+</ul>
+<div class="tab-content p-0">
+<div class="active fade in tab-pane" id="practice-tab-1">
+<div class="practice_sub_tab_wrap">
+<a class="practice_problem_tab practice_sub_tab_btn btn btn-xs m-r-5 m-b-5 btn-success" onclick="activate_tab(&quot;problem&quot;)" data-n="1" data-toggle="tooltip" data-placement="bottom" href="javascript:void(0)" data-original-title="" title="">問題</a>
+
+<span class="suggested_answer_link">
+<a class="practice_suggested_answer_tab practice_sub_tab_btn btn btn-xs m-r-5 m-b-5 btn-default" title="" onclick="activate_tab(&quot;suggested_answer&quot;)" data-n="1" data-toggle="tooltip" data-placement="bottom" data-confirm="模範解答を見ますか？" data-text="チケットが１枚必要です。" data-confirm-button-color="#72c02c" data-confirm-button-text="模範解答を見る" data-remote="true" rel="nofollow" data-method="post" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001/1/answer" data-original-title="チケット1枚で模範解答を見れます(有料プランならチケット不要)"><i class="fa fa-lock"></i>
+模範解答を見る
+<span class="f-s-10">チケット：6</span>
+</a>
+</span>
+<span class="input_value_link">
+<a class="practice_input_value_tab practice_sub_tab_btn btn btn-xs m-r-5 m-b-5 btn-default" title="" onclick="activate_tab(&quot;input_value&quot;)" data-n="1" data-toggle="tooltip" data-placement="bottom" data-confirm="採点時に使用する入力値を見ますか？" data-text="チケットが１枚必要です。" data-confirm-button-color="#72c02c" data-confirm-button-text="入力値を見る" data-remote="true" rel="nofollow" data-method="post" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001/1/input_value" data-original-title="チケット1枚で採点時の入力値が見れます(有料プランならチケット不要)"><i class="fa fa-lock"></i>
+入力値を見る
+<span class="f-s-10">チケット：6</span>
+</a>
+</span>
+</div>
+<div class="practice_sub_content" id="practice_sub_problem_1">
+<h3 class="f-s-20 text-info">
+<i class="fa fa-book"></i>
+演習課題「メッセージを表示しよう - その 1」
+</h3>
+<div class="bs-callout bs-callout-info">
+<p>
+</p><p>右のコードエリアで、以下のメッセージを表示してください。大文字・小文字の違いに注意しましょう。<br></p><pre>Hello paiza</pre><br>採点ボタンをクリックして、正解と表示されれば演習課題クリアです！<br><p></p>
+<p></p>
+</div>
+<div class="bs-callout bg-silver">
+<h4>
+<i class="fa fa-download"></i>
+期待する出力値
+</h4>
+<p>
+</p><p>Hello paiza<br></p>
+<p></p>
+</div>
+</div>
+<div id="practice_sub_suggested_answer_wrap_1"></div>
+<div id="practice_sub_input_value_wrap_1"></div>
+
+</div>
+<div class="fade tab-pane" id="practice-tab-2">
+<div class="practice_sub_tab_wrap">
+<a class="practice_problem_tab practice_sub_tab_btn btn btn-xs m-r-5 m-b-5 btn-success" onclick="activate_tab(&quot;problem&quot;)" data-n="2" data-toggle="tooltip" data-placement="bottom" href="javascript:void(0)" data-original-title="" title="">問題</a>
+
+<span class="suggested_answer_link">
+<a class="practice_suggested_answer_tab practice_sub_tab_btn btn btn-xs m-r-5 m-b-5 btn-default" title="" onclick="activate_tab(&quot;suggested_answer&quot;)" data-n="2" data-toggle="tooltip" data-placement="bottom" data-confirm="模範解答を見ますか？" data-text="チケットが１枚必要です。" data-confirm-button-color="#72c02c" data-confirm-button-text="模範解答を見る" data-remote="true" rel="nofollow" data-method="post" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001/2/answer" data-original-title="チケット1枚で模範解答を見れます(有料プランならチケット不要)"><i class="fa fa-lock"></i>
+模範解答を見る
+<span class="f-s-10">チケット：6</span>
+</a>
+</span>
+</div>
+<div class="practice_sub_content" id="practice_sub_problem_2">
+<h3 class="f-s-20 text-info">
+<i class="fa fa-book"></i>
+演習課題「メッセージを表示しよう - その 2」
+</h3>
+<div class="bs-callout bs-callout-info">
+<p>
+</p><p>右のコードエリアで、以下のメッセージを表示してください。大文字・小文字の違いに注意しましょう。<br></p><pre>Good morning</pre><br>採点ボタンをクリックして、正解と表示されれば演習課題クリアです！<br><p></p>
+<p></p>
+</div>
+<div class="bs-callout bg-silver">
+<h4>
+<i class="fa fa-download"></i>
+期待する出力値
+</h4>
+<p>
+</p><p>Good morning<br></p>
+<p></p>
+</div>
+</div>
+<div id="practice_sub_suggested_answer_wrap_2"></div>
+<div id="practice_sub_input_value_wrap_2"></div>
+
+</div>
+<div class="fade tab-pane" id="practice-tab-3">
+<div class="practice_sub_tab_wrap">
+<a class="practice_problem_tab practice_sub_tab_btn btn btn-xs m-r-5 m-b-5 btn-success" onclick="activate_tab(&quot;problem&quot;)" data-n="3" data-toggle="tooltip" data-placement="bottom" href="javascript:void(0)" data-original-title="" title="">問題</a>
+
+<span class="suggested_answer_link">
+<a class="practice_suggested_answer_tab practice_sub_tab_btn btn btn-xs m-r-5 m-b-5 btn-default" title="" onclick="activate_tab(&quot;suggested_answer&quot;)" data-n="3" data-toggle="tooltip" data-placement="bottom" data-confirm="模範解答を見ますか？" data-text="チケットが１枚必要です。" data-confirm-button-color="#72c02c" data-confirm-button-text="模範解答を見る" data-remote="true" rel="nofollow" data-method="post" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001/3/answer" data-original-title="チケット1枚で模範解答を見れます(有料プランならチケット不要)"><i class="fa fa-lock"></i>
+模範解答を見る
+<span class="f-s-10">チケット：6</span>
+</a>
+</span>
+</div>
+<div class="practice_sub_content" id="practice_sub_problem_3">
+<h3 class="f-s-20 text-info">
+<i class="fa fa-book"></i>
+演習課題「メッセージを表示しよう - その 3」
+</h3>
+<div class="bs-callout bs-callout-info">
+<p>
+</p><p>右のコードエリアで、以下のメッセージを表示してください。句読点に注意しましょう。<br></p><pre>世界の皆さん、こんにちは</pre><br>採点ボタンをクリックして、正解と表示されれば演習課題クリアです！<br><p></p>
+<p></p>
+</div>
+<div class="bs-callout bg-silver">
+<h4>
+<i class="fa fa-download"></i>
+期待する出力値
+</h4>
+<p>
+</p><p>世界の皆さん、こんにちは<br></p>
+<p></p>
+</div>
+</div>
+<div id="practice_sub_suggested_answer_wrap_3"></div>
+<div id="practice_sub_input_value_wrap_3"></div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="split-pane-divider" id="horizontal-divider1"></div>
+<div class="split-pane-component" id="bottom-component1">
+<div class="pretty-split-pane-component-inner">
+<div class="vertical-box">
+<div class="tips_area">
+<ul class="nav nav-pills">
+<li class="active">
+<a data-toggle="tab" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#default-tab-1">Tips</a>
+</li>
+<div class="parctice_btn_area pull-right">
+<a id="practice_btn" class="btn btn-white m-r-5 btn-sm left_btn control_btn" href="javascript:void(0);"><i class="fa fa-arrow-circle-right">演習課題へ進む</i></a>
+<a id="movie_btn" class="btn btn-inverse m-r-5 btn-sm left_btn control_btn disnon" href="javascript:void(0);"><i class="fa fa-arrow-circle-left"></i>
+動画へ戻る
+</a></div>
+<div class="foward_btn_area pull-right">
+<a id="next_chapter_ex_btn" class="btn btn-xs btn-inverse m-r-5 btn-sm left_btn inbtn" data-check-url="/works/javascript/trial/javascript-trial-1/63001/status" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63002"><i class="fa fa-forward"></i> 次のチャプターへ</a>
+<a id="prev_lesson_btn" class="btn btn-xs btn-inverse m-r-5 btn-sm left_btn inbtn" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63000"><i class="fa fa-backward"></i> 前のチャプターへ</a>
+</div>
+</ul>
+</div>
+<div class="tab-content tipsBox slimScrollDiv">
+<div class="tab-pane fade active in" id="default-tab-1">
+<div class="tipsBoxInner">
+
+<h2 class="tips_title">
+<i class="fa fa-flag"></i>
+＃02:はじめてのプログラミング
+<span class="done_btn_area">
+<form id="progress_form" action="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001/progress" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="BjZ5J+ha8hmy1KQJM8qSnQiz1Po0O4C/zReVk1dm7B/fDfdvN2yto4UNE2KMobb0hL1cudUWz/lEgd4IHsXbyg==">
+<input value="1" type="hidden" name="work_progress[finish_flg]" id="work_progress_finish_flg">
+<a id="done_on" class="done_on btn-primary btn m-r-5 btn-xs" onclick="Rails.fire($(this).closest(&quot;form&quot;)[0], &quot;submit&quot;);" href="javascript:void(0)"><i class="fa fa-check"></i>
+受講済みにする
+</a></form>
+
+
+</span>
+</h2>
+<div class="mb20">
+<p>JavaScript を使ったプログラムを体験します。はじめてなので、簡単なメッセージを表示するプログラムを書いてみましょう。</p>
+</div>
+<div class="panel-group" id="accordion" style="margin-bottom: 0">
+<div class="panel panel-inverse overflow-hidden">
+<div class="panel-heading">
+<h3 class="panel-title">
+<a aria-expanded="false" class="accordion-toggle accordion-toggle-styled collapsed" data-parent="#accordion" data-toggle="collapse" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#collapse2">
+<i class="fa fa-plus-circle"></i>
+メッセージを表示する
+</a>
+</h3>
+</div>
+<div aria-expanded="false" class="panel-collapse collapse" id="collapse2" style="height: 0px;">
+<div class="panel-body bg-silver">
+<p></p><pre>console.log("Hello world");</pre><br><p></p>
+</div>
+</div>
+</div>
+<div class="panel panel-inverse overflow-hidden">
+<div class="panel-heading">
+<h3 class="panel-title">
+<a aria-expanded="false" class="accordion-toggle accordion-toggle-styled collapsed" data-parent="#accordion" data-toggle="collapse" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#collapse3">
+<i class="fa fa-plus-circle"></i>
+コードの基本的な書き方
+</a>
+</h3>
+</div>
+<div aria-expanded="false" class="panel-collapse collapse" id="collapse3" style="height: 0px;">
+<div class="panel-body bg-silver">
+<p>- プログラムでは、命令を使って、コンピュータに動作を指示します<br>- console.log() は、データを表示しろという命令です<br>- このような命令を、JavaScript では「関数」と呼びます<br>- カッコのなかに、表示するデータを指定します<br>- カッコのなかのデータを、「引数」(ひきすう)と呼びます<br>- 表示する文字をダブルクォーテーションで囲みます<br>- コードの行末に「;」を付けます<br></p>
+</div>
+</div>
+</div>
+<div class="panel panel-inverse overflow-hidden">
+<div class="panel-heading">
+<h3 class="panel-title">
+<a aria-expanded="false" class="accordion-toggle accordion-toggle-styled collapsed" data-parent="#accordion" data-toggle="collapse" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#collapse4">
+<i class="fa fa-plus-circle"></i>
+メッセージを変える
+</a>
+</h3>
+</div>
+<div aria-expanded="false" class="panel-collapse collapse" id="collapse4" style="height: 0px;">
+<div class="panel-body bg-silver">
+<p></p><pre>console.log("Hello paiza");</pre><br><p></p>
+</div>
+</div>
+</div>
+<div class="panel panel-inverse overflow-hidden">
+<div class="panel-heading">
+<h3 class="panel-title">
+<a aria-expanded="false" class="accordion-toggle accordion-toggle-styled collapsed" data-parent="#accordion" data-toggle="collapse" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#collapse5">
+<i class="fa fa-plus-circle"></i>
+メッセージを 2 行表示する
+</a>
+</h3>
+</div>
+<div aria-expanded="false" class="panel-collapse collapse" id="collapse5" style="height: 0px;">
+<div class="panel-body bg-silver">
+<p>複数行のコードがあると、上から順番に実行する<br></p><pre>console.log("Hello paiza");<br>console.log("Hello paiza");</pre><br><p></p>
+</div>
+</div>
+</div>
+<div class="panel panel-inverse overflow-hidden">
+<div class="panel-heading">
+<h3 class="panel-title">
+<a aria-expanded="false" class="accordion-toggle accordion-toggle-styled collapsed" data-parent="#accordion" data-toggle="collapse" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#collapse6">
+<i class="fa fa-plus-circle"></i>
+日本語に変える
+</a>
+</h3>
+</div>
+<div aria-expanded="false" class="panel-collapse collapse" id="collapse6" style="height: 0px;">
+<div class="panel-body bg-silver">
+<p></p><pre>console.log("Hello paiza");<br>console.log("冒険に出かけよう");</pre><br><p></p>
+</div>
+</div>
+</div>
+</div>
+<div class="bread_crumb_like mt10">
+<span>
+<a href="https://paiza.jp/works">プログラミング学習</a>
+</span>
+&gt;
+<span>
+<a href="https://paiza.jp/works/search_courses/2005">JavaScript</a>
+</span>
+&gt;
+<span>
+<a href="https://paiza.jp/works/javascript/trial">JavaScript体験編</a>
+</span>
+&gt;
+<span>
+<a href="https://paiza.jp/works/javascript/trial/javascript-trial-1">JavaScript体験編1: JavaScriptをはじめよう</a>
+</span>
+&gt;
+<span>
+はじめてのプログラミング
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="split-pane-resize-shim"></div></div>
+
+</div>
+<div class="split-pane-divider" id="vertical-divider"></div>
+<div class="split-pane-component" id="right-component">
+<div class="split-pane fixed-top" id="right-component-normal" style="min-height: 115px;">
+<div class="split-pane-component" id="top-component2">
+<div class="pretty-split-pane-component-inner">
+<div class="editor_ctr_btn_wrap" data-original-title="" title="">
+<div class="editor_ctr_btn">
+<button class="btn btn-default btn-xs m-r-5 disnon" data-placement="bottom" data-toggle="tooltip" id="init_code_btn" title="" style="display: none;" data-original-title="デフォルトコードに戻す">
+<i class="fa fa-refresh"></i>
+</button>
+</div>
+<div class="editor_ctr_btn m-t-10">
+<button class="btn btn-default btn-xs m-r-5" data-placement="bottom" data-toggle="tooltip" id="code_zoom" title="" data-original-title="拡大する">
+<i class="fa fa-search-plus"></i>
+</button>
+</div>
+<div class="editor_ctr_btn">
+<button class="btn btn-default btn-xs m-r-5" data-placement="bottom" data-toggle="tooltip" id="code_zoom_out" title="" data-original-title="縮小する">
+<i class="fa fa-search-minus"></i>
+</button>
+</div>
+<div class="editor_ctr_btn m-t-10">
+<button class="theme_color_box dark" data-placement="bottom" data-theme="dark" data-toggle="tooltip" title="" data-original-title="エディターテーマを黒にする"></button>
+</div>
+<div class="editor_ctr_btn">
+<button class="theme_color_box white" data-placement="bottom" data-theme="white" data-toggle="tooltip" title="" data-original-title="エディターテーマを白にする"></button>
+</div>
+<div class="editor_ctr_btn">
+<button class="theme_color_box orange" data-placement="bottom" data-theme="orange" data-toggle="tooltip" title="" data-original-title="エディターテーマを黄色にする"></button>
+</div>
+</div>
+<pre id="editor-div" style="height: calc(100%); width: 100%; margin: 0" class=" ace_editor ace-solarized-light ace_focus"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14px; width: 6.59781px; left: 222.141px; top: 0px;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 576px; width: 40px;"><div class="ace_gutter-cell " style="height: 14px;">1</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14px;"></div></div><div class="ace_scroller" style="left: 40px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 492px; height: 576px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 531.825px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14px"><span class="ace_storage ace_type">console</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function ace_firebug">log</span><span class="ace_paren ace_lparen">(</span><span class="ace_string">"Hello world"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer"><div class="ace_cursor" style="left: 182.141px; top: 0px; width: 6.59781px; height: 14px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 14px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 40px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 532px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></pre>
+<div class="operation_btn_area">
+<div class="btn btn-inverse btn-sx m-r-5 operation_check_btn pull-right disnon operation_check_case" data-placement="top" data-toggle="tooltip" id="operation_check_case" title="" style="display: none;" data-original-title="コードを実行し出力値の正誤をチェックします(Ctrl-Shift-Enter)">
+<i class="fa fa-check"></i> 採点する
+</div>
+<div class="btn btn-success btn-sx m-r-5 operation_check_btn pull-right" data-placement="top" data-toggle="tooltip" id="operation_check" title="" data-original-title="コードを実行し実行結果を出力します(Ctrl-Enter)">
+<i class="fas fa-play-circle"></i> コードの実行
+</div>
+</div>
+</div>
+</div>
+<div class="split-pane-divider" id="horizontal-divider2"></div>
+<div class="split-pane-component" id="bottom-component2">
+<div class="pretty-split-pane-component-inner">
+<div class="panel panel-inverse panel-with-tabs height-100-percent" data-sortable-id="ui-widget-9" style="margin: 0;">
+<div class="io_area c-flex flex-wrap flex-justify-between">
+<div class="label label-inverse f-s-13 pull-left m-b-5" style="height:37px; padding-top:13px;">
+<i class="fa fa-sign-in"></i>
+<a class="f-w-700 text-white" target="_blank" rel="noopener noreferrer" href="https://paiza.jp/works/paid_plan_lp/society?from=chapters">有料会員になるとエンジニアに質問ができます</a>
+</div>
+<ul class="nav nav-pills m-b-5" id="myTab">
+<li id="output_tag" style="display: none;">
+<a data-toggle="tab" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#output"><i class="fa fa-download"></i>
+<span class="hidden-xs">出力</span>
+</a></li>
+<li id="compile_error_tag" style="display: none;">
+<a data-toggle="tab" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#compile_error"><i class="fa fa-exclamation-triangle"></i>
+<span class="hidden-xs">コンパイルエラー</span>
+</a></li>
+<li id="runtime_error_tag" style="display: none;">
+<a data-toggle="tab" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#runtime_error"><i class="fa fa-exclamation-triangle"></i>
+<span class="hidden-xs">実行時エラー</span>
+</a></li>
+<li class="active" id="input_tag">
+<a data-toggle="tab" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#input"><i class="fa fa-upload"></i>
+<span class="hidden-xs">入力</span>
+</a></li>
+</ul>
+</div>
+<div class="tab-content tab-content-wrap" id="myTabContent" style="height: calc(100% - 70px);">
+<div class="tab-pane height-100-percent fade" id="output">
+<div class="output_ctn">
+<span class="pull-left m-t-10">
+出力タイプ：
+</span>
+<select name="output_type" id="output_type" class="form-control pull-left"><option selected="selected" value="text">text</option>
+<option value="html">html</option></select>
+<a id="output_open" class="btn btn-default btn-icon btn-circle btn-lg pull-left" target="_blank" href="https://paiza.jp/works/javascript/trial/javascript-trial-1/63001#"><i class="fa fa-expand"></i> </a>
+</div>
+<textarea name="output_area" id="output_area" class="inout-area output_view" readonly="readonly"></textarea>
+<iframe class="disnon output_view" id="output_html_area" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/saved_resource.html"></iframe>
+</div>
+<div class="tab-pane height-100-percent fade" id="compile_error">
+<textarea name="compile_error_area" id="compile_error_area" class="inout-area" readonly="readonly"></textarea>
+</div>
+<div class="tab-pane height-100-percent fade" id="runtime_error">
+<textarea name="runtime_error_area" id="runtime_error_area" class="inout-area" readonly="readonly"></textarea>
+</div>
+<div class="tab-pane height-100-percent fade in active" id="input">
+<textarea name="input_area" class="practice_input_0 movie_input inout-area input_area" data-n="0" id="input_area" style=""></textarea>
+<textarea name="input_area" class="practice_input_1 inout-area input_area disnon" data-n="1" readonly="readonly" style="display: none;"></textarea>
+<textarea name="input_area" class="practice_input_2 inout-area input_area disnon" data-n="2" readonly="readonly" style="display: none;"></textarea>
+<textarea name="input_area" class="practice_input_3 inout-area input_area disnon" data-n="3" readonly="readonly" style="display: none;"></textarea>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="split-pane-resize-shim"></div></div>
+
+</div>
+<div class="split-pane-resize-shim"></div></div>
+<div class="split-pane-resize-shim"></div></div>
+</div>
+
+</div>
+
+<!-- %a.btn.btn-icon.btn-circle.btn-success.btn-scroll-to-top.fade{ 'data-click': 'scroll-top', href: 'javascript:;' } -->
+<!-- %i.fa.fa-angle-up -->
+</div>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/works-ea08c61367a4d43ca4a14e2dea9ceb71aaf7e487b7ec61ab337fa24b5d7faa33.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/work_editor-a410351d9482a3ee4ab1403b344fc1ddfd45b1a4b68232813646375ce967ccfd.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/jquery.plugin.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/jquery.countdown.js.ダウンロード"></script>
+<script src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/jquery.countdown-ja.js.ダウンロード"></script>
+<script>
+  (function() {
+    $(function() {
+      ConfirmUnload("このページから移動してもよろしいですか？");
+      return $('.inbtn').on('click', function(e) {
+        var exec_confirm_unload;
+        exec_confirm_unload = false;
+        return true;
+      });
+    });
+  
+  }).call(this);
+</script>
+
+<script>
+  (function() {
+    $(document).ready(function() {
+      return App.init();
+    });
+  
+  }).call(this);
+</script>
+
+
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/widget_iframe.0edc1ef9f8b82d9b79c6115bda79f63f.html" title="Twitter settings iframe" style="display: none;"></iframe>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1217309881982600");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1217309881982600&amp;ev=PageView&amp;noscript=1"></noscript>
+<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./JavaScript体験編1_はじめてのプログラミング _ プログラミング学習サービス【paizaラーニング】_files/saved_resource(1).html"></iframe><div class=" ace_editor ace_autocomplete ace-solarized-light" style="top: 69px; height: 64px; left: 979.358px; display: none;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0;"></textarea><div class="ace_gutter" style="display: none;"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px;"></div><div class="ace_gutter-active-line" style="display: none;"></div></div><div class="ace_scroller" style="left: 0px; right: 0px; bottom: 0px;"><div class="ace_content" style="cursor: default; margin-top: 0px; width: 278px; height: 96px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 531.825px; visibility: hidden;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:16px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line ace_selected" style="height:16px"><span class="ace_">window</span><span class="ace_rightAlignedText">keyword</span></div><div class="ace_line" style="height:16px"><span class="ace_">with</span><span class="ace_rightAlignedText">keyword</span></div><div class="ace_line" style="height:16px"><span class="ace_">while</span><span class="ace_rightAlignedText">keyword</span></div><div class="ace_line" style="height:16px"><span class="ace_">wh</span><span class="ace_rightAlignedText">snippet</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors" style="opacity: 0;"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59781px; height: 16px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 64px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 0px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 278px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></body></html>

@@ -1,13 +1,24 @@
-<h1 class="display-3"><%= @event.title %>の詳細画面</h1>
-<p class="lead">日付: <%= @event.date.strftime("%Y年%m月%d日 %H時%M分") %></p>
-<p class="lead">type: <%= @event.status %></p>
-<p class="lead">スタート: <%= @event.start_point %></p>
-<p class="lead">ゴール:<%= @event.goal_point %></p>
-<p class="lead">金額:<%= @event.carry_price %>円</p>
-<p class="lead">概要: <%= @event.content %></p>
-<p class="lead">投稿者: <%= link_to "#{ @event.user.name }", user_path(@event.user) %></p>
+<div class="contaner">
+  <div class="row">
+    <h1 class="display-3"><%= @event.title %>の詳細画面</h1>
+    <div class="col-6">
 
+      <p class="lead">日付: <%= @event.date.strftime("%Y年%m月%d日 %H時%M分") %></p>
+      <p class="lead">type: <%= @event.status %></p>
+      <p class="lead">スタート: <%= @event.start_point %></p>
+      <p class="lead">ゴール:<%= @event.goal_point %></p>
+      <p class="lead">金額:<%= @event.carry_price %>円</p>
+      <p class="lead">概要: <%= @event.content %></p>
+      <p class="lead">投稿者: <%= link_to "#{ @event.user.name }", user_path(@event.user) %></p>
 
-<% if @event.user_id != current_user.id && @event.participat_id.nil? %>
-  <button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to "申し込みする", event_path(@event,participat_status:"申し込み"), method: :put, data: {confirm: "このイベントに申込みますか？"} %></a></<button>
-<% end %>
+      <!-- 申込みボタンの表示の有無 -->
+      <% if @event.user_id != current_user.id && @event.participat_id.nil? %>
+        <button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to "申し込みする", event_path(@event,participat_status:"申し込み"), method: :put, data: {confirm: "このイベントに申込みますか？"} %></a></<button>
+      <% end %>
+    </div>
+    <div class="col-6">
+      <p>aaa</p>
+
+    </div>
+  </div>
+</div>
