@@ -18,7 +18,7 @@
     </div>
     <div class="col-6">
       <p>aaa</p>
-      <%= form_with(model: @comment) do |form| %>
+      <%= form_with model: @comment,url: event_comments_path(@event), local: true do |form| %>
         <%= form.label :コメント %>
         <%= form.text_field :comment %>
         <%= form.submit "コメントする"%>

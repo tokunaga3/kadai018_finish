@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   end
   resources :events
   resources :relationships, only: [:create, :destroy]
-  resources :comments, only: [:create]
+  resources :event_comments
 end

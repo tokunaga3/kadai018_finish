@@ -13,5 +13,6 @@ module Sample
     config.time_zone = 'Asia/Tokyo'
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', 'ja.yml').to_s]
+    config.web_console.whitelisted_ips = '10.0.2.2'
   end
 end
