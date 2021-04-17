@@ -33,7 +33,9 @@ ActiveRecord::Schema.define(version: 2021_04_10_071200) do
   create_table "event_comments", force: :cascade do |t|
     t.string "comment", null: false
     t.bigint "event_id"
+    t.bigint "user_id"
     t.index ["event_id"], name: "index_event_comments_on_event_id"
+    t.index ["user_id"], name: "index_event_comments_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -98,6 +100,7 @@ ActiveRecord::Schema.define(version: 2021_04_10_071200) do
   end
 
   add_foreign_key "event_comments", "events"
+  add_foreign_key "event_comments", "users"
   add_foreign_key "events", "users"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"

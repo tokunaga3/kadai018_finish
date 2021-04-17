@@ -3,6 +3,7 @@ before_action :event_comment_params
   def create
     @comment = EventComment.new(event_comment_params)
     @comment.event_id = params[:format].to_i
+    @comment.user_id = current_user.id
       if @comment.save
         # binding.pry
         @comments = EventComment.where(event_id:@comment[:event_id])

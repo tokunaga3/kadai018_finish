@@ -5,5 +5,6 @@ class EventComments < ActiveRecord::Migration[5.2]
 
     end
     add_reference :event_comments, :event, foreign_key: true
+    add_reference :event_comments, :user, foreign_key: true
   end
 end
