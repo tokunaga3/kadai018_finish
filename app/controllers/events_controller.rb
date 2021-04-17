@@ -15,6 +15,7 @@ class EventsController < ApplicationController
 
   def show
     @comment = EventComment.new
+    @comments =  EventComment.where(event_id:params[:id].to_i)
   end
 
   def edit

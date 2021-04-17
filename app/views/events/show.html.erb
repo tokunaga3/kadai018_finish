@@ -16,8 +16,13 @@
         <button type="button" class="btn btn-outline-success" id="hedder_left"><a href="#" class="text-secondary"><%= link_to "申し込みする", event_path(@event,participat_status:"申し込み"), method: :put, data: {confirm: "このイベントに申込みますか？"} %></a></<button>
       <% end %>
     </div>
+
     <div class="col-6">
-      <p>aaa</p>
+      <!-- コメント -->
+      <div class="user_comments">
+        <%= render "user_comments", comments: @comments %>
+      </div>
+
       <%= form_with model: @comment, url: event_comments_path(@event), remote: true do |form| %>
         <%= form.label :コメント %>
         <%= form.text_field :comment %>

@@ -1,1 +1,1 @@
-<%= binding.pry%>
+$('.user_comments').html("<%= escape_javascript(render 'events/user_comments', comments: @commen ) %>");
