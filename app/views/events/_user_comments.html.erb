@@ -1,10 +1,9 @@
 <% @comments.each_with_index do | user_comments| %>
   <% comment_user = User.find(user_comments.user_id) %>
-  <div class="row">
-    <div class="<%= users_comments_classchage(comment_user) %>">
-      <p><%= comment_user.name %></p>
-      <p><%= user_comments.comment %></p>
+    <div class="row">
+      <div class="<%= users_comments_classchage(comment_user) %>">
+        <p><%= comment_user.name %></p>
+        <p><%= user_comments.comment %></p>
+      </div>
     </div>
-  </div>
-
 <% end %>
