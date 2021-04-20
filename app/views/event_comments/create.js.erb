@@ -1,2 +1,5 @@
 $('.user_comments').html("<%= escape_javascript(render 'events/user_comments', comments: @commen ) %>");
 $("#event_comment_comment").val("");
+
+var user_comment = document.getElementById("user_comments");
+user_comment.scrollTop = user_comment.scrollHeight;
